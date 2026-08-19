@@ -5,12 +5,14 @@ mess and dining hall, then keep coming back for the live menu, extra items,
 and cuisine of the day. Swiggy/Zomato-style everyday use, not a once-a-month
 form.
 
-> Naming: the live slug/subdomain stays the plain descriptor `mess.iith.online`
-> (once deployed); the brand name "Ruchi" lives in the README H1, repo
-> description, and in-app header. Same rule as Sanchari (`iith-transport`) /
-> Nivas (`iith-hostels`).
+> Naming: the repo slug stays the plain descriptor `iith-mess`; the brand
+> name "Ruchi" carries the subdomain, the README H1, the repo description
+> and the in-app header. Same family as Sanchari and Nivas.
 
-**Status:** in development · **Not deployed** · **On GitHub:** `saichandanmettu/iith-mess` (public)
+**Status:** live at [ruchi.iith.online](https://ruchi.iith.online) · **On GitHub:** `saichandanmettu/iith-mess` (public)
+
+Registration, the counter scanner and the admin console all work. A full
+registration cycle has not yet been run with real students.
 
 Plain HTML/CSS/JS, no build step — consistent with the other live IITH
 projects (Sanchari, Nivas, Aquatics, Athletics).
