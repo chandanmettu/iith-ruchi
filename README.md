@@ -10,23 +10,19 @@ form.
 > description, and in-app header. Same rule as Sanchari (`iith-transport`) /
 > Nivas (`iith-hostels`).
 
-**Status:** in development · **Not deployed** · **Not on GitHub**
+**Status:** in development · **Not deployed** · **On GitHub:** `saichandanmettu/iith-mess` (public)
 
 Plain HTML/CSS/JS, no build step — consistent with the other live IITH
 projects (Sanchari, Nivas, Aquatics, Athletics).
 
 ## Which version this is
 
-Three builds of this existed. **This one — the Claude build — is the one
-being taken forward**, chosen for its plain-HTML stack matching the other
-projects.
-
-The other two are preserved under `other versions/`, not deleted:
-
-- `mess-git-0-commits/` — had `git init` run but **not a single commit**, so
-  no history exists
-- `mess-gemini-react/` — a React rebuild; more files, but that's scaffolding
-  rather than more product
+Three builds of this existed locally. **This one — the Claude build — is
+the one being taken forward**, chosen for its plain-HTML stack matching the
+other projects. The other two (a zero-commit copy and a React rebuild) are
+kept locally under `other versions/` for reference but are **not tracked in
+this repo** — deliberately excluded via `.gitignore` to keep the published
+history to the product that's actually shipping.
 
 ## Vision
 
