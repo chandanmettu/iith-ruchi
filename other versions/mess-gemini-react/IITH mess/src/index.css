@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #f6f4ee;
+    color: #1e293b;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Claymorphism 3D Shadows & Utilities */
+.clay-card {
+  background: #f6f4ee;
+  box-shadow: 12px 12px 24px #e0ded6, -12px -12px 24px #ffffff;
+  border-radius: 24px;
+}
+
+.clay-card-inset {
+  background: #f6f4ee;
+  box-shadow: inset 6px 6px 12px #e0ded6, inset -6px -6px 12px #ffffff;
+  border-radius: 20px;
+}
+
+.clay-button-amber {
+  background: linear-gradient(145deg, #f59e0b, #d97706);
+  box-shadow: 6px 6px 14px #dedcd4, -6px -6px 14px #ffffff;
+  color: #ffffff;
+  border-radius: 18px;
+  transition: all 0.2s ease;
+}
+
+.clay-button-amber:hover {
+  box-shadow: 3px 3px 8px #dedcd4, -3px -3px 8px #ffffff;
+  transform: translateY(1px);
+}
+
+.clay-button-emerald {
+  background: linear-gradient(145deg, #10b981, #059669);
+  box-shadow: 6px 6px 14px #dedcd4, -6px -6px 14px #ffffff;
+  color: #ffffff;
+  border-radius: 18px;
+  transition: all 0.2s ease;
+}
+
+.clay-button-emerald:hover {
+  box-shadow: 3px 3px 8px #dedcd4, -3px -3px 8px #ffffff;
+  transform: translateY(1px);
+}
+
+.clay-button-neutral {
+  background: #f6f4ee;
+  box-shadow: 6px 6px 12px #e0ded6, -6px -6px 12px #ffffff;
+  color: #334155;
+  border-radius: 18px;
+  transition: all 0.2s ease;
+}
+
+.clay-button-neutral:hover {
+  box-shadow: 2px 2px 6px #e0ded6, -2px -2px 6px #ffffff;
+  color: #0f172a;
+}
