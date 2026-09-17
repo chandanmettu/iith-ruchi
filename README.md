@@ -9,7 +9,7 @@ form.
 > name "Ruchi" carries the subdomain, the README H1, the repo description
 > and the in-app header. Same family as Sanchari and Nivas.
 
-**Status:** live at [ruchi.iith.online](https://ruchi.iith.online) · **On GitHub:** `saichandanmettu/iith-mess` (public)
+**Status:** live at [ruchi.iith.online](https://ruchi.iith.online) · **On GitHub:** `chandanmettu/iith-mess` (public)
 
 Registration, the counter scanner and the admin console all work. A full
 registration cycle has not yet been run with real students.
