@@ -8,8 +8,8 @@ items, cuisine labels and useful nutrition context.
 | | |
 |---|---|
 | **Live** | [ruchi.iith.online](https://ruchi.iith.online), a **demo**: browser-local data, production Supabase not activated. (Not `mess.iith.online`, which never worked.) |
-| **Repository** | `github.com/chandanmettu/iith-mess` (public) |
-| **Push via** | SSH host alias `github-iith-mess` (deploy key `~/.ssh/iith-mess-deploy`) |
+| **Repository** | `github.com/chandanmettu/iith-ruchi` (public). It was `iith-mess` until 2026-09-19. |
+| **Push via** | SSH host alias `github-iith-mess` (deploy key `~/.ssh/iith-mess-deploy`). The alias keeps the old name on purpose. |
 | **Deploy** | Hostinger Git auto-deploy from `main`. **A push is a production release.** |
 | **Agent policy** | Ask before pushing. |
 
@@ -76,7 +76,7 @@ nutrition) earns the repeat visits and is the highest-leverage work left.
 Still open: where menu data comes from (manual entry or a weekly CSV upload).
 
 Visual language: the "Sunrise IITH" identity is shared with Sanchari
-(`../iith-transport/assets/app.css`). Reuse it and don't invent a new palette.
+(`../Sanchari/assets/app.css`). Reuse it and don't invent a new palette.
 
 ## Next
 
@@ -86,4 +86,4 @@ Visual language: the "Sunrise IITH" identity is shared with Sanchari
 4. Run a small staff/student pilot and document ownership and recovery.
 
 See [`docs/PROGRESS.md`](docs/PROGRESS.md) for the current engineering record
-and the workspace [`DEPLOY.md`](../DEPLOY.md) for the wider release map.
+and the workspace [`DEPLOY.md`](../../DEPLOY.md) for the wider release map.
