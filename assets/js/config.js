@@ -68,7 +68,9 @@ MESS.bucketCap = function (cfg, messId, hallId) {
     return m ? m.cap : 0;
   }
   const h = cfg.halls.find(function (x) { return x.id === hallId; });
-  if (cfg.capMode === 'grid') return h ? Math.round(h.cap / cfg.messes.length) : 0;
+  // PostgreSQL integer division floors this value; mirror it in demo mode so
+  // the same configuration never advertises a different capacity.
+  if (cfg.capMode === 'grid') return h ? Math.floor(h.cap / cfg.messes.length) : 0;
   return h ? h.cap : 0;
 };
 
