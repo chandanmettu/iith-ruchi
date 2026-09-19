@@ -1,68 +1,74 @@
-# IITH Ruchi — Progress & Coming Next
+# Ruchi — current progress
 
-Last updated: 2026-08-19
+Last updated: **2026-09-05**
 
-## Vision
+This file describes the current product only. The earlier pre-deployment
+vision and backlog are preserved verbatim in
+[`archive/PRE_DEPLOYMENT_PROGRESS.md`](archive/PRE_DEPLOYMENT_PROGRESS.md).
 
-Most IITH mess apps stop at "register once a month." Ruchi is meant to be
-opened **every day**, Swiggy/Zomato-style: a clean, fast, food-first
-interface where registration is just the front door. Once you're in, the
-reason to come back is the daily menu, extra items, cuisine tags, and
-calorie info — not a form.
+## Current state
 
-Two loops, one app:
+Ruchi's frontend is deployed at <https://ruchi.iith.online>. It currently runs
+the demo/localStorage backend because `assets/js/config.js` does not contain a
+Supabase project URL or anon key. The visible registration, scanner and admin
+flows work as a product demonstration; their data is browser-local and is not
+an institute registration record.
 
-1. **Monthly loop** — register for a mess/dining hall before the window
-   closes, see live seat availability, change your choice if allowed.
-2. **Daily loop** — open the app to check today's menu per meal/hall, what
-   extras are on offer, what cuisine it is, and roughly how many calories
-   you're looking at, before you walk over.
+## 2026-09-05 — backend foundation and documentation reset
 
-## Live today
+- Reworked `supabase/schema.sql` into an idempotent production schema.
+- Kept seat claims atomic, but stopped trusting the browser-supplied roll and
+  capacity bucket. The function now derives the roll from the authenticated
+  institute email, validates the selected mess/hall against server config, and
+  derives the capacity bucket server-side.
+- Config changes now re-bucket active registrations and recompute counters;
+  removing a mess/hall that still has active registrations is rejected instead
+  of silently corrupting capacity.
+- Escaped student/configuration values in the boarding pass and selection-card
+  HTML path so a stored display value cannot become markup.
+- Supabase reads/writes now surface RLS/network errors instead of silently
+  showing empty data or a false “saved” state during activation testing.
+- Made staff/admin helpers `SECURITY DEFINER` with a locked search path so RLS
+  checks can safely inspect the staff allow-list.
+- Replaced broad scan-log mutation access with staff read/insert and admin-only
+  delete policies; restricted staff-directory reads to self/admin.
+- Added explicit function grants and revoked anonymous/public RPC execution.
+- Added `menu_days` and `menu_items` with publication state, meal, standard vs
+  extra item, cuisine, calorie, protein, price and availability fields.
+- Aligned demo grid-capacity rounding with PostgreSQL integer division.
+- Added `docs/DEPLOY.md` and rewrote the README so “deployed frontend” is not
+  confused with “production backend active.”
 
-| Area | Notes |
-|---|---|
-| Sign-in | `@iith.ac.in` only, Google or a demo-email fallback |
-| Mess/hall registration | Tap-to-arm-then-confirm register button (4s window), inline expand/collapse per mess card |
-| Live seat counts | Per hostel block / dining hall (UDH / LDH), not per mess |
-| Registration pass | Boarding-pass-style confirmation card once registered, with a "change my choice" path |
-| Counter verification | Scanner screen, barcode/QR off the existing IITH ID card |
-| Admin | Seat caps and registration oversight |
-| Visual identity | "Sunrise IITH" language (matches Sanchari/Nivas) — reused, not reinvented |
+The schema has been reviewed locally but has not been applied to a live
+Supabase project in this workspace; no project credentials were available or
+added.
 
-Backend: demo mode by default (localStorage + seeded data), switches to
-Supabase by pasting URL + anon key into `assets/js/config.js`.
+## Built and deployed
 
-## Coming next (priority order)
+- responsive student registration UI
+- demo institute-domain sign-in
+- mess/hall selection, seat counts and registration confirmation
+- cancel/change path while the configured window is open
+- scanner/counter lookup and scan history interfaces
+- admin configuration and registration views
+- localStorage demo adapter and Supabase adapter
 
-1. **Daily menu screen** — today's items per meal (breakfast/lunch/snacks/
-   dinner) per dining hall. This is the highest-leverage addition: it's the
-   difference between a form and an app people open daily.
-2. **Extra / à la carte items** — separate from the standard thali, with
-   price if applicable.
-3. **Cuisine tagging** — South Indian / North Indian / Continental / etc.
-   per item or per meal, shown as a glance-able tag or icon.
-4. **Calorie / nutrition info** — per item, even approximate, so the app
-   answers "what should I eat" not just "what is being served."
-5. **Resolve the demo/live dual-backend question** — decide whether launch
-   is Supabase from day one or localStorage-first with a later migration.
-6. **Resolve per-hall cap assumptions** — confirm with the mess office
-   whether UDH/LDH sit under both messes or are tied to specific messes
-   (affects whether caps need `capMode: 'grid'`).
-7. **Payment/fee status** — not modelled at all yet; decide whether Ruchi
-   tracks mess-fee payment status or stays registration-only.
-8. Feedback / rating on individual meals — lower priority, after the core
-   daily-use loop is live.
+## Backend ready in source, not activated
 
-## Not started
+- Google-authenticated institute accounts
+- atomic one-registration-per-cycle seat claims
+- RLS-protected registrations, capacity, scans and staff roles
+- daily-menu storage and publication controls
 
-Rebates/leave-of-absence handling, push notifications for "today's menu is
-up," historical menu browsing, nutrition goals/tracking beyond per-item
-calories.
+## Next, in order
 
-## Open questions for Chandan
+1. Create/select the owned Supabase project and apply the schema.
+2. Configure Google OAuth, redirect URLs and the first admin outside Git.
+3. Set accurate mess/hall/capacity data and test all three cap modes.
+4. Run the acceptance checklist in `DEPLOY.md`; only then switch the public
+   status from demo to production-backed.
+5. Build the daily menu reader, then the admin menu editor or CSV workflow.
+6. Pilot with a small student/staff group before a full registration cycle.
 
-- Where does menu data come from — manual entry by mess office / admin
-  panel, or a weekly upload (spreadsheet/CSV)? This decides the admin build.
-- Same UDH/LDH cap-scope and ID-card-barcode questions noted in the README/
-  memory — still unconfirmed.
+Open product decisions: source/owner of menu data, confirmed cap scope, staff
+ownership/handover and whether fee status belongs in Ruchi at all.

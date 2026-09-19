@@ -87,6 +87,11 @@
   function fmtWhen(iso) {
     return new Date(iso).toLocaleString('en-IN', { day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit', hour12: true });
   }
+  function esc(value) {
+    return String(value == null ? '' : value).replace(/[&<>"']/g, function (ch) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch];
+    });
+  }
 
   /* ---------- state ---------- */
   let store, cfg, session = null, counts = {}, mine = null;
@@ -239,9 +244,9 @@
         }
       });
       main.innerHTML =
-        '<div class="m-name">' + m.name + '</div>' +
-        '<div class="m-tag">' + (m.tag || '') + '</div>' +
-        '<div class="m-blurb">' + (m.blurb || '') + '</div>' +
+        '<div class="m-name">' + esc(m.name) + '</div>' +
+        '<div class="m-tag">' + esc(m.tag || '') + '</div>' +
+        '<div class="m-blurb">' + esc(m.blurb || '') + '</div>' +
         '<div class="m-expand">' + (messFull ? 'See halls' : 'Tap to see halls') + icon('check', 12).replace('stroke-width="2"', 'stroke-width="3"').replace('<path d="M5 12.5 10 17l9-10"/>', '<path d="M6 9l6 6 6-6"/>') + '</div>';
 
       const vp = el('div', { class: 'm-vp' });
@@ -272,9 +277,9 @@
 
     const row = el('div', { class: 'hrow' });
     row.innerHTML =
-      '<div class="hbadge">' + h.id.slice(0, 2) + '</div>' +
+      '<div class="hbadge">' + esc(h.id.slice(0, 2)) + '</div>' +
       '<div class="hinfo">' +
-      '  <div class="hname">' + h.name + '</div>' +
+      '  <div class="hname">' + esc(h.name) + '</div>' +
       '  <div class="hmeter">' +
       '    <div class="track"><div class="fill ' + fillClass(c.taken, c.cap) + '" style="width:' + pct + '%"></div></div>' +
       '    <span class="hleft">' + (full ? 'Full' : left + ' left') + '</span>' +
@@ -336,7 +341,7 @@
 
     wrap.innerHTML =
       '<div class="pass-band"><div class="pass-band-in">' +
-      '  <div><div class="pass-route">' + cfg.cycleLabel + '</div></div>' +
+      '  <div><div class="pass-route">' + esc(cfg.cycleLabel) + '</div></div>' +
       '  <div class="pass-bp">IITH<br>MESS PASS</div>' +
       '</div></div>' +
       '<div class="pass-meta">' +
@@ -347,7 +352,7 @@
       '</div>' +
       '<div class="pass-perf"></div>' +
       '<div class="pass-stub">' +
-      '  <span class="pass-serial">' + mine.roll + '</span>' +
+      '  <span class="pass-serial">' + esc(mine.roll) + '</span>' +
       '  <span class="pass-valid"><i></i>Active</span>' +
       '</div>' +
       '<div class="pass-note">Show your ID card at the counter. Roll number found → you\'re through.</div>';
@@ -359,7 +364,7 @@
 
   function cell(iconName, label, value) {
     return '<div class="pm-cell"><div class="pm-icon">' + icon(iconName, 18) + '</div>' +
-      '<div><div class="pm-lbl">' + label + '</div><div class="pm-val">' + value + '</div></div></div>';
+      '<div><div class="pm-lbl">' + esc(label) + '</div><div class="pm-val">' + esc(value) + '</div></div></div>';
   }
 
   async function changeChoice() {

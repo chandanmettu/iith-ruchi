@@ -1,51 +1,89 @@
-# IITH Ruchi
+# Ruchi
 
-Mess registration and daily dining companion for IIT Hyderabad — pick your
-mess and dining hall, then keep coming back for the live menu, extra items,
-and cuisine of the day. Swiggy/Zomato-style everyday use, not a once-a-month
-form.
+Ruchi is IIT Hyderabad's mess-registration and daily dining companion. The
+monthly loop covers mess/hall selection, live seat capacity, a registration
+pass and counter verification. The daily loop is designed around menus, extra
+items, cuisine labels and useful nutrition context.
 
-> Naming: the repo slug stays the plain descriptor `iith-mess`; the brand
-> name "Ruchi" carries the subdomain, the README H1, the repo description
-> and the in-app header. Same family as Sanchari and Nivas.
+| | |
+|---|---|
+| **Live** | [ruchi.iith.online](https://ruchi.iith.online), a **demo**: browser-local data, production Supabase not activated. (Not `mess.iith.online`, which never worked.) |
+| **Repository** | `github.com/chandanmettu/iith-mess` (public) |
+| **Push via** | SSH host alias `github-iith-mess` (deploy key `~/.ssh/iith-mess-deploy`) |
+| **Deploy** | Hostinger Git auto-deploy from `main`. **A push is a production release.** |
+| **Agent policy** | Ask before pushing. |
 
-**Status:** live at [ruchi.iith.online](https://ruchi.iith.online) · **On GitHub:** `chandanmettu/iith-mess` (public)
+The distinction matters: the public files are live, but blank Supabase values
+in `assets/js/config.js` select the localStorage demo store and seeded demo
+data. Do not describe registrations, scans or seat counts as production data
+until the backend activation checklist has passed.
 
-Registration, the counter scanner and the admin console all work. A full
-registration cycle has not yet been run with real students.
+## What is built
 
-Plain HTML/CSS/JS, no build step — consistent with the other live IITH
-projects (Sanchari, Nivas, Aquatics, Athletics).
+- institute-domain sign-in flow, with a demo email path when offline
+- mess and dining-hall selection with two-step confirmation
+- capacity counters and one active registration per cycle
+- boarding-pass-style registration confirmation and change/cancel flow
+- roll-number lookup, scanner view and scan history for counter staff
+- admin interface for registration configuration and oversight
+- interchangeable `MockStore` and `SupaStore` data layers
+- hardened Supabase schema for atomic seat claims, RLS, staff roles and scans
+- daily-menu backend tables for meals, standard/extra items, cuisine,
+  calories, protein, price and publication status
 
-## Which version this is
+The daily-menu database exists, but the student menu screen and admin menu
+editor are not built yet.
 
-Three builds of this existed locally. **This one — the Claude build — is
-the one being taken forward**, chosen for its plain-HTML stack matching the
-other projects. The other two (a zero-commit copy and a React rebuild) are
-kept locally under `other versions/` for reference but are **not tracked in
-this repo** — deliberately excluded via `.gitignore` to keep the published
-history to the product that's actually shipping.
+## Stack and structure
 
-## Vision
+Plain HTML, CSS and JavaScript; there is no build step.
 
-Registration is the front door, not the destination. The app should earn a
-place people open daily, the way Swiggy/Zomato do:
+```text
+index.html              student registration experience
+scanner.html            counter lookup and scan log
+admin.html              configuration and registration oversight
+assets/js/config.js     public client configuration and demo defaults
+assets/js/store.js      localStorage/Supabase data adapter
+supabase/schema.sql     idempotent production database/RLS setup
+docs/DEPLOY.md          backend activation and release checklist
+docs/PROGRESS.md        current state and next work
+docs/archive/           preserved pre-deployment narrative
+```
 
-- **Monthly registration** — pick mess + dining hall, see live seat caps,
-  lock it in two taps.
-- **Daily menu** — what's being served today, per meal, per hall.
-- **Extra items / à la carte** — anything beyond the standard thali.
-- **Cuisine tagging** — South Indian / North Indian / Continental etc. per
-  item, so people can tell at a glance what today looks like.
-- **Calorie / nutrition info** — enough to make the "what should I eat"
-  decision without leaving the app.
-- Clean, neat, food-app look and feel — not a government-form aesthetic.
+## Local preview
 
-See `docs/PROGRESS.md` for what's built vs. what's next in priority order.
+```sh
+python3 -m http.server 8012
+```
 
-## Before this goes live
+Open `http://localhost:8012`. With Supabase values blank, the demo runs entirely
+in the browser and can be reset from the admin screen.
 
-Nothing here has been deployed or security-reviewed beyond a secrets scan
-(clean — no keys, no `.env`, no credentials). The open questions from the
-earlier notes still stand: the demo/live dual backend, and the per-hall cap
-assumptions.
+## Production activation
+
+Follow [`docs/DEPLOY.md`](docs/DEPLOY.md). In short: create the Supabase
+project, run `supabase/schema.sql`, configure Google OAuth and allowed URLs,
+bootstrap the first admin, set the project URL and anon key, then test student,
+staff, over-capacity and cancellation paths. The service-role key and OAuth
+secret must never enter the frontend or Git.
+
+## Product direction
+
+The goal is for it to feel like Swiggy or Zomato, something students open
+daily and not once a month. The monthly registration loop is the front door.
+The **daily loop** (menu per meal and hall, à la carte extras, cuisine tags,
+nutrition) earns the repeat visits and is the highest-leverage work left.
+Still open: where menu data comes from (manual entry or a weekly CSV upload).
+
+Visual language: the "Sunrise IITH" identity is shared with Sanchari
+(`../iith-transport/assets/app.css`). Reuse it and don't invent a new palette.
+
+## Next
+
+1. Activate and acceptance-test Supabase with a non-production cycle.
+2. Confirm whether caps apply per hall, mess or mess-by-hall grid.
+3. Build the daily menu reader and admin editor on the new menu tables.
+4. Run a small staff/student pilot and document ownership and recovery.
+
+See [`docs/PROGRESS.md`](docs/PROGRESS.md) for the current engineering record
+and the workspace [`DEPLOY.md`](../DEPLOY.md) for the wider release map.

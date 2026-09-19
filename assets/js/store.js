@@ -262,6 +262,13 @@
   /* ================= Supabase (live) store ================= */
   function SupaStore(client) { this.mode = 'live'; this.sb = client; this._subs = []; }
 
+  function liveData(result, action) {
+    if (result && result.error) {
+      throw new Error(action + ': ' + result.error.message);
+    }
+    return result ? result.data : null;
+  }
+
   SupaStore.prototype = {
     async init() {
       const self = this;
@@ -272,11 +279,15 @@
     },
 
     async getConfig() {
-      const { data } = await this.sb.from('mess_config').select('data').eq('id', 1).single();
+      const result = await this.sb.from('mess_config').select('data').eq('id', 1).single();
+      const data = liveData(result, 'Could not load mess configuration');
       return (data && data.data) || MESS.defaultConfig();
     },
     async setConfig(cfg) {
-      await this.sb.from('mess_config').upsert({ id: 1, data: cfg });
+      liveData(
+        await this.sb.from('mess_config').upsert({ id: 1, data: cfg }),
+        'Could not save mess configuration'
+      );
       this._fire();
       return cfg;
     },
@@ -303,7 +314,8 @@
     async signOut() { await this.sb.auth.signOut(); },
 
     async getCounts(cfg) {
-      const { data } = await this.sb.from('capacity').select('bucket,cap,taken').eq('cycle', cfg.cycle);
+      const result = await this.sb.from('capacity').select('bucket,cap,taken').eq('cycle', cfg.cycle);
+      const data = liveData(result, 'Could not load capacity');
       const out = {};
       MESS.allBuckets(cfg).forEach(b => { out[b.key] = { taken: 0, cap: b.cap }; });
       (data || []).forEach(r => { out[r.bucket] = { taken: r.taken, cap: r.cap }; });
@@ -311,8 +323,9 @@
     },
 
     async getMine(cfg, email) {
-      const { data } = await this.sb.from('registrations').select('*')
+      const result = await this.sb.from('registrations').select('*')
         .eq('cycle', cfg.cycle).eq('email', email).eq('status', 'active').maybeSingle();
+      const data = liveData(result, 'Could not load your registration');
       return data || null;
     },
 
@@ -337,20 +350,26 @@
 
     async lookup(cfg, roll) {
       roll = String(roll || '').trim().toUpperCase();
-      const { data } = await this.sb.from('registrations').select('*')
+      const result = await this.sb.from('registrations').select('*')
         .eq('cycle', cfg.cycle).eq('roll', roll).eq('status', 'active').maybeSingle();
+      const data = liveData(result, 'Could not look up registration');
       return data ? { found: true, reg: data } : { found: false, otherCycle: null };
     },
 
     async listRegistrations(cfg) {
-      const { data } = await this.sb.from('registrations').select('*')
+      const result = await this.sb.from('registrations').select('*')
         .eq('cycle', cfg.cycle).eq('status', 'active').order('created_at', { ascending: false }).limit(5000);
+      const data = liveData(result, 'Could not load registrations');
       return data || [];
     },
 
-    async logScan(entry) { await this.sb.from('scans').insert(entry); return true; },
+    async logScan(entry) {
+      liveData(await this.sb.from('scans').insert(entry), 'Could not record scan');
+      return true;
+    },
     async listScans() {
-      const { data } = await this.sb.from('scans').select('*').order('at', { ascending: false }).limit(300);
+      const result = await this.sb.from('scans').select('*').order('at', { ascending: false }).limit(300);
+      const data = liveData(result, 'Could not load scan history');
       return data || [];
     },
     async resetDemo() { throw new Error('Not available in live mode'); },
