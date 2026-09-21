@@ -1,18 +1,18 @@
 /* Beta: the established glass material, with a quieter headline and clock. */
 .final-menu [hidden] { display: none !important; }
-.welcome-copy { flex: 1; min-width: 0; }
-.welcome-glass { gap: 18px; align-items: center; }
+.welcome-copy { flex: 0 1 auto; min-width: 0; }
+.welcome-glass { gap: 18px; align-items: center; justify-content: flex-start; }
 .welcome-glass h1 { font-size: clamp(30px,3.3vw,43px); letter-spacing: -1.4px; }
 .headline-accent { padding: 0; }
 .headline-accent em { font-family: Georgia, 'Times New Roman', serif; font-weight: 500; letter-spacing: -1.5px; }
 .breakfast-meaning { margin: 12px 0 0; max-width: 245px; color: var(--muted); font-size: 12px; line-height: 1.5; }
-.service-countdown { width: 118px; min-height: 99px; padding: 13px 14px 11px; text-align: center; border: 1px solid #fff9; border-radius: 24px; background: linear-gradient(145deg,#fff9,#ffffff38); box-shadow: inset 0 1px 0 #fff,0 8px 24px #675b3505; backdrop-filter: blur(16px); }
+.service-countdown { width: 126px; min-height: 99px; padding: 13px 14px 11px; text-align: center; border: 1px solid #fff9; border-radius: 24px; background: linear-gradient(145deg,#fff9,#ffffff38); box-shadow: inset 0 1px 0 #fff,0 8px 24px #675b3505; backdrop-filter: blur(16px); }
 .countdown-heading { display: flex; justify-content: center; align-items: center; gap: 5px; }
 .countdown-heading svg { width: 13px; height: 13px; stroke: currentColor; fill: none; stroke-width: 1.5; opacity: .65; }
 .countdown-label { margin: 0; font-size: 11px; }
 #countdown-value { display: flex; justify-content: center; align-items: flex-start; gap: 5px; margin-top: 8px; font-variant-numeric: tabular-nums; }
 .countdown-unit { display: flex; flex-direction: column; align-items: center; min-width: 30px; }
-.countdown-unit b { font-size: 27px; font-weight: 500; letter-spacing: -.9px; line-height: 1.1; }
+.countdown-unit b { font-size: 30px; font-weight: 500; letter-spacing: -.9px; line-height: 1.1; }
 .countdown-unit small { font-size: 9px; letter-spacing: .3px; color: var(--muted); margin-top: 3px; }
 .countdown-separator { font-size: 20px; line-height: 1.1; color: #8b8c7c; }
 .countdown-static { font-size: 18px; letter-spacing: -.4px; padding: 5px 0; }
@@ -71,8 +71,8 @@
   .welcome-glass { gap: 12px; padding-bottom: 24px; }
   .welcome-glass h1 { font-size: clamp(26px,7vw,34px); letter-spacing: -1px; }
   .breakfast-meaning { font-size: 10px; line-height: 1.5; margin-top: 9px; max-width: 195px; }
-  .service-countdown { width: 101px; min-height: 90px; padding: 11px 8px 10px; border-radius: 22px; }
-  .countdown-unit b { font-size: 24px; }
+  .service-countdown { width: 108px; min-height: 90px; padding: 11px 8px 10px; border-radius: 22px; }
+  .countdown-unit b { font-size: 27px; }
   .countdown-label { font-size: 10px; }
   .countdown-static { font-size: 16px; }
   .feature-sheet { width: 100%; max-width: 100%; max-height: 92dvh; margin: auto 0 0; }
@@ -88,8 +88,9 @@
 }
 .report-actions .primary-button { margin: 0; }
 /* Four destinations, with Saved using the same filter state as the menu chips. */
-.app-dock { width: 332px; }
-.app-dock button { flex: 1; min-width: 0; }
+.app-dock { width: 300px; padding: 5px 6px; }
+.app-dock button { flex: 1; min-width: 0; height: 44px; gap: 3px; padding: 4px; }
+.app-dock svg { width: 20px; height: 20px; }
 .app-dock button:hover { background: #ffffff66; }
 #report-form .photo-file-input { position: absolute; width: 1px; height: 1px; min-height: 0; margin: 0; padding: 0; opacity: 0; overflow: hidden; }
 #report-form .photo-picker { display: flex; gap: 13px; align-items: center; border: 1px dashed #b9b5a4; border-radius: 18px; background: #ffffff60; padding: 17px; cursor: pointer; }
@@ -134,14 +135,10 @@
 .notes-label small { display: block; font-size: 10px; line-height: 1.5; color: var(--muted); margin-top: 3px; }
 .menu-notes-body { padding: 4px 22px 22px; }
 .menu-notes-body section { border-top: 1px solid var(--line); padding-top: 15px; }
-.ruchi-footer { align-items: center; margin: 22px 0 0; padding: 22px 6px 130px; }
-.footer-signature { display: flex; align-items: center; gap: 9px; }
-.footer-signature img { width: 33px; height: 33px; object-fit: contain; opacity: .85; }
-.footer-signature strong { display: block; color: var(--ink); font-size: 17px; font-weight: 550; letter-spacing: -.35px; }
-.footer-signature span { display: block; color: var(--muted); font-size: 10px; margin-top: 3px; }
-.ruchi-footer .beta-label { display: flex; align-items: center; gap: 6px; font-size: 10px; border: 1px solid #d7d8c99c; background: #ffffff4d; border-radius: 99px; padding: 7px 11px; }
-.beta-label i { width: 5px; height: 5px; border-radius: 50%; background: #8a9278; }
+.ruchi-footer { flex-direction: column; align-items: center; justify-content: center; gap: 7px; margin: 22px 0 0; padding: 26px 6px 112px; text-align: center; }
+.footer-credit { margin: 0; font-size: 14px; font-weight: 400; color: var(--muted); }
+.footer-credit a { color: var(--ink); font-weight: 550; text-decoration: underline; text-decoration-color: #a64c3240; text-underline-offset: 4px; transition: color 180ms, text-decoration-color 180ms; }
+.footer-credit a:hover { color: var(--accent); text-decoration-color: currentColor; }
+.footer-affiliation { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.5; }
 @media(max-width:370px) { .release-list li { gap: 11px; grid-template-columns: 38px 1fr; } .release-icon { width: 38px; height: 38px; border-radius: 14px; } .release-list::before { left: 18px; } .release-list li > div { padding: 15px; } }
 @media(prefers-reduced-motion:reduce) { #upcoming-dialog[open] .release-list::before,#upcoming-dialog[open] .release-list li,#upcoming-dialog[open] .roadmap-emblem { animation: none; } }
-
-.footer-signature img { mix-blend-mode: multiply; }
