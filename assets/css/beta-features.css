@@ -1,12 +1,12 @@
 /* Beta: the established glass material, with a quieter headline and clock. */
 .final-menu [hidden] { display: none !important; }
-.welcome-copy { flex: 0 1 auto; min-width: 0; }
-.welcome-glass { gap: 18px; align-items: center; justify-content: flex-start; }
+.welcome-copy { min-width: 0; }
+.welcome-glass { display: grid; grid-template-columns: minmax(0, 1fr) clamp(126px, 30%, 148px); gap: 18px; align-items: center; }
 .welcome-glass h1 { font-size: clamp(30px,3.3vw,43px); letter-spacing: -1.4px; }
 .headline-accent { padding: 0; }
 .headline-accent em { font-family: Georgia, 'Times New Roman', serif; font-weight: 500; letter-spacing: -1.5px; }
 .breakfast-meaning { margin: 12px 0 0; max-width: 245px; color: var(--muted); font-size: 12px; line-height: 1.5; }
-.service-countdown { width: 126px; min-height: 99px; padding: 13px 14px 11px; text-align: center; border: 1px solid #fff9; border-radius: 24px; background: linear-gradient(145deg,#fff9,#ffffff38); box-shadow: inset 0 1px 0 #fff,0 8px 24px #675b3505; backdrop-filter: blur(16px); }
+.service-countdown { width: 100%; min-height: 99px; padding: 13px 14px 11px; text-align: center; border: 1px solid #fff9; border-radius: 24px; background: linear-gradient(145deg,#fff9,#ffffff38); box-shadow: inset 0 1px 0 #fff,0 8px 24px #675b3505; backdrop-filter: blur(16px); }
 .countdown-heading { display: flex; justify-content: center; align-items: center; gap: 5px; }
 .countdown-heading svg { width: 13px; height: 13px; stroke: currentColor; fill: none; stroke-width: 1.5; opacity: .65; }
 .countdown-label { margin: 0; font-size: 11px; }
@@ -68,10 +68,10 @@
 .report-review .secondary-action { margin-top: 10px; width: 100%; }
 #report-copy-fallback summary { font-size: 12px; }
 @media(max-width:650px) {
-  .welcome-glass { gap: 12px; padding-bottom: 24px; }
+  .welcome-glass { grid-template-columns: minmax(0, 1fr) clamp(108px, 32%, 136px); gap: 12px; padding-bottom: 24px; }
   .welcome-glass h1 { font-size: clamp(26px,7vw,34px); letter-spacing: -1px; }
   .breakfast-meaning { font-size: 10px; line-height: 1.5; margin-top: 9px; max-width: 195px; }
-  .service-countdown { width: 108px; min-height: 90px; padding: 11px 8px 10px; border-radius: 22px; }
+  .service-countdown { width: 100%; min-height: 90px; padding: 11px 8px 10px; border-radius: 22px; }
   .countdown-unit b { font-size: 27px; }
   .countdown-label { font-size: 10px; }
   .countdown-static { font-size: 16px; }
@@ -81,7 +81,8 @@
   #report-form input,#report-form select,#report-form textarea { font-size: 16px; }
 }
 @media(max-width:360px) {
-  .service-countdown { width: 88px; border-radius: 20px; }
+  .welcome-glass { grid-template-columns: minmax(0, 1fr) 96px; }
+  .service-countdown { border-radius: 20px; }
   .countdown-heading { gap: 3px; }
   .welcome-glass h1 { font-size: 24px; }
   .sheet-content { padding-left: 18px; padding-right: 18px; }
