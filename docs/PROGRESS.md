@@ -2,6 +2,16 @@
 
 Last updated: **2026-09-22**
 
+## Hero alignment correction — 2026-09-22
+
+Replaced the left-packed headline/countdown flex row with a two-column grid.
+The timer stays flush with the hero's right edge and uses a responsive width;
+the headline fills the remaining column. This supersedes the earlier compact
+left grouping, which left an abrupt unused area after the timer. Verified all
+four meals at 320, 390, 768, 1024 and 1280 CSS px: no trailing timer gap,
+headline intersection or horizontal overflow. Phone and desktop visual review
+passed. Both entry pages have the new stylesheet cache key.
+
 ## Footer and compact controls — 2026-09-22
 
 Owner approved “Made by Chandan” linked to chandanmettu.com, with “No official
