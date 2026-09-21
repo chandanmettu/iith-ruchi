@@ -2,6 +2,15 @@
 
 Last updated: **2026-09-22**
 
+## Live verification
+
+Release `c4ea9ce` is live at https://ruchi.iith.online/ (22 September 2026).
+Verified all 100 release files over HTTPS: code, data, fonts and text match the
+release; images decode correctly after CDN recompression, EXIF orientation and
+resizing. Production browser loads the new homepage, switches meals/card/list
+views and displays photos without console errors. Registration remains available
+at `/register.html` as a demo. No Supabase activation or email delivery claimed.
+
 ## Daily dining beta release
 
 Owner authorised publication on 22 September. The release makes the daily menu
