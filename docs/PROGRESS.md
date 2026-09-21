@@ -2,6 +2,17 @@
 
 Last updated: **2026-09-22**
 
+## Report form mobile fix — 2026-09-22
+
+The owner reported Safari's native date input overlapping Meal on an iPhone.
+Date/Meal now stack below 481 CSS px. Wider screens retain two columns with
+explicit zero minimum grid widths; labels and controls are constrained to their
+cells. Date and select heights match, and the native date picker stays available.
+Both entry pages use a new stylesheet cache key. Browser checks at 320, 390,
+402, 480, 481, 768 and 1280 CSS px show no intersecting controls or sheet
+overflow; both controls remain 48 px tall. Physical iPhone Safari was not available
+for direct testing.
+
 ## Live verification
 
 Release `c4ea9ce` is live at https://ruchi.iith.online/ (22 September 2026).
