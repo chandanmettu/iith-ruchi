@@ -2,6 +2,17 @@
 
 Last updated: **2026-09-22**
 
+## Footer and compact controls — 2026-09-22
+
+Owner approved “Made by Chandan” linked to chandanmettu.com, with “No official
+affiliation with Gymkhana.” underneath. Removed the footer logo/brand block and
+Menu beta badge. Dock is now 300 × 56 px (shrinks to fit small screens), retaining
+44 px button heights. The countdown has larger digits and sits 12–18 px from
+the heading rather than stretching to the far edge of its container.
+Checked mobile footer/header visuals and desktop; 320, 390, 768 and 1280 px
+layouts have no horizontal overflow or title/timer collision. Both menu shells
+carry the updated CSS cache key.
+
 ## Report form mobile fix — 2026-09-22
 
 The owner reported Safari's native date input overlapping Meal on an iPhone.
@@ -38,7 +49,7 @@ Shipped scope:
   review, email-client handoff and `.eml` attachment export. No email sent by QA.
 - Upcoming timeline: actual mess photographs first, mobile app second,
   personalised features later. No promised dates.
-- Collapsed notes and Ruchi / IIT Hyderabad footer. Developer credit undecided.
+- Collapsed notes and Ruchi / IIT Hyderabad footer. Approved developer credit and affiliation note (see above).
 
 ## Responsive and asset preparation
 
