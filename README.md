@@ -1,89 +1,85 @@
 # Ruchi
 
-Ruchi is IIT Hyderabad's mess-registration and daily dining companion. The
-monthly loop covers mess/hall selection, live seat capacity, a registration
-pass and counter verification. The daily loop is designed around menus, extra
-items, cuisine labels and useful nutrition context.
+Ruchi is IIT Hyderabad’s daily mess companion: the next seven days of menus,
+meal timings, saved dishes and a simple way to report an issue.
 
 | | |
 |---|---|
-| **Live** | [ruchi.iith.online](https://ruchi.iith.online), a **demo**: browser-local data, production Supabase not activated. (Not `mess.iith.online`, which never worked.) |
+| **Live** | [ruchi.iith.online](https://ruchi.iith.online), daily dining beta; registration backend not activated. |
 | **Repository** | `github.com/chandanmettu/iith-ruchi` (public). It was `iith-mess` until 2026-09-19. |
 | **Push via** | SSH host alias `github-iith-mess` (deploy key `~/.ssh/iith-mess-deploy`). The alias keeps the old name on purpose. |
 | **Deploy** | Hostinger Git auto-deploy from `main`. **A push is a production release.** |
 | **Agent policy** | Ask before pushing. |
 
-The distinction matters: the public files are live, but blank Supabase values
-in `assets/js/config.js` select the localStorage demo store and seeded demo
-data. Do not describe registrations, scans or seat counts as production data
-until the backend activation checklist has passed.
+## Daily dining beta
 
-## What is built
+`index.html` and `today.html` serve the same daily-menu app, without login.
+The supplied August 2026 menu drives both messes. Dates automatically resolve
+the four-week rotation; students never choose week numbers. Vegetarian and
+non-vegetarian markers, card/list views and browser-local saved dishes are active.
 
-- institute-domain sign-in flow, with a demo email path when offline
-- mess and dining-hall selection with two-step confirmation
-- capacity counters and one active registration per cycle
-- boarding-pass-style registration confirmation and change/cancel flow
-- roll-number lookup, scanner view and scan history for counter staff
-- admin interface for registration configuration and oversight
-- interchangeable `MockStore` and `SupaStore` data layers
-- hardened Supabase schema for atomic seat claims, RLS, staff roles and scans
-- daily-menu backend tables for meals, standard/extra items, cuisine,
-  calories, protein, price and publication status
+Breakfast runs 7:30–10:00 am on weekdays and 7:30–10:30 am on weekends;
+lunch 12:30–2:45 pm; snacks 5:00–6:00 pm; dinner 7:30–9:30 pm (Asia/Kolkata).
+Automatic meal selection and the countdown use those hours and the selected date.
+All source explanations live in the initially collapsed Menu notes.
 
-The daily-menu database exists, but the student menu screen and admin menu
-editor are not built yet.
+Reports select Mess A/B, date, meal, issue and description, with an optional
+photo. Drafts stay in IndexedDB on the device. Review opens an email addressed
+to the mess secretary; photo reports can download an attached-image `.eml`.
+Students complete sending in their mail client. There is no automatic sending,
+server-side complaint inbox or delivery confirmation.
 
-## Stack and structure
+The interface uses locally hosted Outfit, a warm textured gradient, glass
+surfaces and short meal-icon gestures. Reduced motion/transparency are supported.
+Phones use two card columns, portrait tablets three, and wider screens four;
+list views adapt separately. Images are illustrative; credits are linked from notes.
 
-Plain HTML, CSS and JavaScript; there is no build step.
+## Structure
+
+Plain HTML, CSS and JavaScript, with no build step.
 
 ```text
-index.html              student registration experience
-scanner.html            counter lookup and scan log
-admin.html              configuration and registration oversight
-assets/js/config.js     public client configuration and demo defaults
-assets/js/store.js      localStorage/Supabase data adapter
-supabase/schema.sql     idempotent production database/RLS setup
-docs/DEPLOY.md          backend activation and release checklist
-docs/PROGRESS.md        current state and next work
-docs/archive/           preserved pre-deployment narrative
+index.html / today.html          daily dining app
+register.html                   preserved registration prototype
+scanner.html / admin.html        registration staff prototypes
+assets/data/menu-august-2026.json source-backed menu and service hours
+assets/data/menu-notices.json    dated special announcements (currently empty)
+assets/js/menu.js                menu browsing and saved dishes
+assets/js/meal-context.js        India-time schedule and countdown
+assets/js/beta-features.js       reports, drafts and roadmap sheets
+assets/js/email-draft.js         attached-photo email file generation
+assets/css/flagship.css          shared final app design and breakpoints
+menu-photo-credits.html          photo attribution and illustration disclosure
+supabase/schema.sql             future registration/menu backend
 ```
 
-## Local preview
+Keep `index.html` and `today.html` identical when updating the menu shell.
+Keep CSS/JS cache keys in both pages in sync. Only final app assets ship;
+earlier local design explorations and original oversized artwork are not part
+of the public release.
 
-```sh
-python3 -m http.server 8012
-```
+## Preview and deployment
 
-Open `http://localhost:8012`. With Supabase values blank, the demo runs entirely
-in the browser and can be reset from the admin screen.
+Serve this folder with a static HTTP server on port 8012. Open
+`http://localhost:8012/` for the app, or `/register.html` for registration.
+Review exact staged files before committing; pushing `main` publishes through
+Hostinger. Verify the actual public URLs after deployment.
 
-## Production activation
+## Roadmap
 
-Follow [`docs/DEPLOY.md`](docs/DEPLOY.md). In short: create the Supabase
-project, run `supabase/schema.sql`, configure Google OAuth and allowed URLs,
-bootstrap the first admin, set the project URL and anon key, then test student,
-staff, over-capacity and cancellation paths. The service-role key and OAuth
-secret must never enter the frontend or Git.
+1. Original photographs of the food served in the mess.
+2. A standalone iPhone/Android app, planned for the App Store and Google Play.
+3. Personalised Measure, profiles with Google login, history/streaks, feedback
+   and report tracking. These are planned, with no promised release dates.
 
-## Product direction
+Measure remains hidden and disabled in this beta. Nutrition is not invented.
+Wednesday fruit rotation remains ambiguous in the source and is withheld.
+See [menu interpretation](docs/WEEKLY_MENU.md) and [progress](docs/PROGRESS.md).
 
-The goal is for it to feel like Swiggy or Zomato, something students open
-daily and not once a month. The monthly registration loop is the front door.
-The **daily loop** (menu per meal and hall, à la carte extras, cuisine tags,
-nutrition) earns the repeat visits and is the highest-leverage work left.
-Still open: where menu data comes from (manual entry or a weekly CSV upload).
+## Registration backend
 
-Visual language: the "Sunrise IITH" identity is shared with Sanchari
-(`../Sanchari/assets/app.css`). Reuse it and don't invent a new palette.
-
-## Next
-
-1. Activate and acceptance-test Supabase with a non-production cycle.
-2. Confirm whether caps apply per hall, mess or mess-by-hall grid.
-3. Build the daily menu reader and admin editor on the new menu tables.
-4. Run a small staff/student pilot and document ownership and recovery.
-
-See [`docs/PROGRESS.md`](docs/PROGRESS.md) for the current engineering record
-and the workspace [`DEPLOY.md`](../../DEPLOY.md) for the wider release map.
+`register.html`, scanner and admin retain the earlier localStorage demo.
+Blank Supabase client settings intentionally select demo data. Production
+registration, OAuth, capacity enforcement and staff roles are not activated.
+Follow [the backend activation checklist](docs/DEPLOY.md) before claiming those
+services work with real users. Never ship service-role keys or OAuth secrets.
