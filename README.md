@@ -31,6 +31,9 @@ server-side complaint inbox or delivery confirmation.
 
 The interface uses locally hosted Outfit, a warm textured gradient, glass
 surfaces and short meal-icon gestures. Reduced motion/transparency are supported.
+The interface uses light Espresso by default, Basil green for
+Vegetarian and Paprika red for Egg / non-veg, with smooth palette transitions.
+All dishes and Saved return to Espresso. Dark mode is deferred.
 Phones use two card columns, portrait tablets three, and wider screens four;
 list views adapt separately. Images are illustrative; credits are linked from notes.
 
@@ -44,7 +47,9 @@ register.html                   preserved registration prototype
 scanner.html / admin.html        registration staff prototypes
 assets/data/menu-august-2026.json source-backed menu and service hours
 assets/data/menu-notices.json    dated special announcements (currently empty)
-assets/js/menu.js                menu browsing and saved dishes
+assets/js/menu.js                menu browsing, saved dishes and daily plate
+assets/js/plate.js               plate rendering and entered-nutrition totals
+assets/css/plate.css             optional tracking controls and plate sheet
 assets/js/meal-context.js        India-time schedule and countdown
 assets/js/beta-features.js       reports, drafts and roadmap sheets
 assets/js/email-draft.js         attached-photo email file generation
@@ -69,10 +74,16 @@ Hostinger. Verify the actual public URLs after deployment.
 
 1. Original photographs of the food served in the mess.
 2. A standalone iPhone/Android app, planned for the App Store and Google Play.
-3. Personalised Measure, profiles with Google login, history/streaks, feedback
+3. Dish-specific nutrition, profiles with Google login, history/streaks, feedback
    and report tracking. These are planned, with no promised release dates.
 
-Measure remains hidden and disabled in this beta. Nutrition is not invented.
+Optional tracking is available as **Plate mode** and **My Plate**.
+The dock opens today's plate across meals, with half-portion adjustments,
+removal and browser-local persistence. Future menu dates cannot be logged as
+eaten. Calories, protein, carbs and fat total the optional per-portion values
+entered by the student; coverage labels identify partial totals. The source
+menu contains no nutrition data, so automatic estimates are not populated yet.
+Plate entries stay on the device. Nutrition is not invented.
 Wednesday fruit rotation remains ambiguous in the source and is withheld.
 See [menu interpretation](docs/WEEKLY_MENU.md) and [progress](docs/PROGRESS.md).
 

@@ -2,6 +2,46 @@
 
 Last updated: **2026-09-22**
 
+## My Plate — beta, 22 September 2026
+
+Restored optional tracking as Plate mode, with a central My Plate dock action
+and dish-count badge. The plate groups today's entries by meal and supports
+half-portions, alternatives, editing and removal. Existing v2 daily logs are
+preserved; storage remains local without login. Opening My Plate returns to
+today, while future menu dates cannot be logged as eaten. Date changes during
+an open dish prevent saving the entry against the wrong day.
+
+Four nutrition cards sum entered per-portion calories, protein, carbs and fat.
+The mess menu has no nutrition data. Unknown values display unavailable and
+partial totals include coverage counts; zero is distinct from unknown. Automatic
+standard-portion estimates remain pending the owner's nutrition-source choice.
+Optional entry fields accept nonnegative values from labels/reliable sources.
+
+Isolated browser QA used a separate intake-storage prefix, preserving existing
+user entries. Checked adding, alternative selection, mixed-meal grouping,
+editing, live recalculation, reload persistence, removal/clear and future-date
+blocking. Phone visual review and 320/390/820 px geometry checks passed. Pure
+totals checks cover fractional portions, partial coverage, zero and invalid
+values. JavaScript syntax, matching entry pages and diff checks pass.
+Owner authorised publication on 22 September 2026.
+
+## Dynamic dietary palettes — 22 September 2026
+
+The owner selected all three colour directions as filter-driven states. The
+default is now a light Espresso; Vegetarian uses Basil green and Egg / non-veg
+uses Paprika red. All dishes and Saved return to Espresso. Dark mode is deferred.
+`dining-palette.css` animates shared colour tokens over 520 ms so gradients,
+glass, text and selected controls move together. Reduced motion disables the
+transition and touch rings. Palette changes follow the menu's actual filter
+state, including keyboard and dock navigation, rather than a separate preference.
+
+Both entry pages load the new assets and versioned menu script. Browser QA
+confirmed green/red states, light default, preservation across meal changes,
+Saved/Menu reset, keyboard activation and the themed report sheet. Layout checks
+at 320, 390, 820 and 1280 CSS px found no horizontal overflow. JavaScript syntax,
+matching entry pages and whitespace checks pass. This update is included in
+the authorised My Plate release. No report submission was performed.
+
 ## Hero alignment correction — 2026-09-22
 
 Replaced the left-packed headline/countdown flex row with a two-column grid.
@@ -92,3 +132,21 @@ Actual mail-client send/import remains user-operated and unverified.
 
 The earlier registration narrative is in
 [the archived progress document](archive/PRE_DEPLOYMENT_PROGRESS.md).
+
+
+## Local colour studies — 22 September 2026
+
+`colours.html` compares Basil & Cream, Paprika & Peach and Espresso & Butter.
+Each embeds `colour-preview.html`, a snapshot of the current menu shell loading
+only the extra `colour-study.css` and `colour-study.js` files. Current production
+HTML/CSS/JS was unchanged by that exploration. The studies remain review-only;
+the subsequent dynamic-palette implementation above uses all three directions,
+with Espresso adapted to light mode.
+
+Themes cover menu cards, selected meals, date picker, dock, reports and roadmap.
+They retain meal gestures and add short touch feedback and restrained card hover.
+Reduced-motion and reduced-transparency preferences are respected. The comparison
+page provides individual phone/tablet/desktop width controls and full-size links.
+Browser checks passed all three palettes at 320, 820 and 1280px with two/three/four
+card columns and no horizontal overflow; meal switching and the dark mobile report
+sheet were reviewed. No browser errors recorded. No reports sent or drafts saved.
