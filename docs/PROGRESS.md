@@ -2,6 +2,16 @@
 
 Last updated: **2026-09-22**
 
+## Release handoff — 22 September 2026
+
+Commit `7bb3b0f` (My Plate and dynamic dietary palettes) was pushed to
+`origin/main` with the owner's approval. Final cache-busted production checks
+still returned the previous HTML and 404 for the four new CSS/JS assets.
+Production activation is therefore not yet verified. The owner chose to let
+Hostinger finish automatically; no manual hosting change was performed.
+A subsequent owner-requested retry sends this release record as a fresh commit
+to retrigger the Git deployment. Application files remain at release `7bb3b0f`.
+
 ## My Plate — beta, 22 September 2026
 
 Restored optional tracking as Plate mode, with a central My Plate dock action
