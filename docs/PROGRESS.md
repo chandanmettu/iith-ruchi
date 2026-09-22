@@ -9,6 +9,12 @@ web/AI-generated food imagery and features still in development. Credit and
 Gymkhana affiliation wording remain. Both menu entry pages share the note and
 updated stylesheet cache key. Publication explicitly authorised by the owner.
 
+Release `550d1e3` is live and verified. Both HTML entry pages and all changed
+CSS/JS assets match the local release over HTTPS. A fresh browser reload shows
+the footer disclosure, working green filter transition and My Plate sheet with
+no console errors. This also verifies the previously pending `7bb3b0f` features.
+A browser tab holding old HTML may need a reload.
+
 ## Release handoff — 22 September 2026
 
 Commit `7bb3b0f` (My Plate and dynamic dietary palettes) was pushed to
