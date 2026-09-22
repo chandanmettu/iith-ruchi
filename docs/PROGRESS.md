@@ -2,6 +2,13 @@
 
 Last updated: **2026-09-22**
 
+## Footer beta notice — 22 September 2026
+
+Added a visible, palette-aware footer note explaining beta status, illustrative
+web/AI-generated food imagery and features still in development. Credit and
+Gymkhana affiliation wording remain. Both menu entry pages share the note and
+updated stylesheet cache key. Publication explicitly authorised by the owner.
+
 ## Release handoff — 22 September 2026
 
 Commit `7bb3b0f` (My Plate and dynamic dietary palettes) was pushed to
