@@ -46,3 +46,28 @@ test('breakfast chutneys corrected; source fruit conflict still withheld',()=>{
 test('regular menu remains usable if extras request fails',()=>{
  const r=forMeal(menu,null,date(4),'Lunch',4);assert.ok(r.weekly.length>0);assert.deepEqual(r.paid,[]);
 });
+test('mixed alternatives are discoverable in both dietary filters without changing source IDs',()=>{
+ const {forDiet}=require('../assets/js/menu-catalog.js');
+ for(const [day,week,id,vegName] of [
+  [0,3,'chicken-or-paneer-dum-biryani','Paneer dum biryani'],
+  [3,3,'chettinad-egg-curry-methi-malai-matar-paneer','Methi malai matar paneer'],
+  [3,4,'pepper-egg-curry-paneer-butter-masala','Paneer butter masala'],
+  [5,3,'anda-curry-kadai-paneer','Kadai paneer'],
+  [5,4,'boiled-egg-fry-paneer-kolhapuri','Paneer Kolhapuri']]){
+  const source=pick(day,'Dinner',week).weekly.find(f=>f.id===id);
+  const veg=forDiet(source,'veg'),egg=forDiet(source,'egg');
+  assert.equal(veg.name,vegName);assert.equal(veg.id,source.id);
+  assert.equal(veg.options.length,1);assert.equal(veg.options[0].diet,'vegetarian');
+  assert.equal(egg.options.length,1);assert.notEqual(egg.options[0].diet,'vegetarian');
+  assert.equal(source.options.length,2);assert.equal(forDiet(source,'all'),source);
+ }
+});
+test('Wednesday breakfast clearly names omelette and filters its banana alternative',()=>{
+ const {forDiet}=require('../assets/js/menu-catalog.js');
+ const item=pick(3,'Breakfast').weekly.find(f=>f.id==='egg-or-banana');
+ assert.equal(item.name,'Omelette or banana');
+ assert.equal(forDiet(item,'egg').name,'1-egg omelette');
+ assert.equal(forDiet(item,'veg').name,'1 banana');
+ assert.equal(forDiet(item,'egg').photoId,'1-egg-omelette');
+ assert.equal(forDiet(pick(3,'Breakfast').paid.find(f=>f.id==='extra-omelette'),'veg'),null);
+});

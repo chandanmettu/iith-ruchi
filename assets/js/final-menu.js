@@ -98,6 +98,8 @@
     if (picker.open && !picker.contains(event.target)) closePicker();
   });
   new ResizeObserver(positionIndicator).observe(nav);
+  // Empty-to-empty menus do not mutate card children. Follow selection itself.
+  document.addEventListener('ruchi:menurender',positionIndicator);
   new MutationObserver(() => {
     positionIndicator();
     if (reduce.matches || ['favorite','search','measure'].includes(host.dataset.transition)) return;
