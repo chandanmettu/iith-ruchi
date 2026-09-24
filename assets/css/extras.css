@@ -1,0 +1,43 @@
+/* Paid extras share the menu's glass material, type and dietary palette. */
+.menu-kind {
+  display:grid; grid-template-columns:1fr 1fr; position:relative;
+  padding:5px; gap:5px; margin:20px 0 16px; max-width:460px;
+  border:1px solid var(--edge); border-radius:24px;
+  background:linear-gradient(135deg,var(--surface),var(--glass));
+  box-shadow:var(--shadow); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
+}
+.menu-kind button {
+  display:flex; align-items:center; justify-content:center; gap:9px;
+  min-height:48px; padding:10px 16px; border-radius:19px;
+  background:transparent; color:var(--muted); font:500 15px var(--font-ui);
+  transition:background .25s ease,color .25s ease,transform .18s ease;
+}
+.menu-kind button[aria-pressed=true] { background:var(--selected); color:var(--on-selected); box-shadow:0 3px 10px #0000000c; }
+.menu-kind svg { width:19px; height:19px; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; }
+.menu-kind button:active { transform:scale(.97); }
+.menu-kind .extras-count { min-width:22px; padding:2px 6px; border-radius:9px; background:var(--accent-soft); color:var(--accent); font-size:12px; font-variant-numeric:tabular-nums; }
+.menu-kind button[aria-pressed=true] .extras-count { background:#ffffff24; color:inherit; }
+.extras-context { display:flex; align-items:flex-start; gap:10px; margin:0 0 20px; padding:14px 16px; border:1px solid var(--edge); border-radius:18px; background:var(--surface); color:var(--muted); font-size:13px; line-height:1.5; }
+.extras-context svg { width:18px; height:18px; flex:none; margin-top:1px; fill:none; stroke:var(--accent); stroke-width:1.7; }
+.extras-context p { margin:0; }
+.extras-context strong { color:var(--ink); font-weight:550; }
+.extra-card .extra-price { display:block; margin-top:7px; color:var(--accent); font-size:21px; font-weight:600; line-height:1.15; font-variant-numeric:tabular-nums; }
+.extra-card .extra-portion { display:block; margin:5px auto 0; max-width:25ch; color:var(--muted); font-size:12px; line-height:1.4; }
+.extra-card .extra-rotation { display:inline-block; margin-top:6px; color:var(--muted); font-size:11px; }
+.extras-group-note { margin:-4px 0 18px; color:var(--muted); font-size:13px; line-height:1.5; max-width:60ch; }
+.food-dialog .extra-detail-price { display:inline-flex; align-items:center; gap:10px; margin:12px 0 4px; color:var(--accent); font-weight:600; font-size:28px; }
+.extra-detail-price small { color:var(--muted); font-weight:400; font-size:13px; }
+.view-list .extra-card .food-open { min-width:0; }
+.view-list .extra-card .extra-price { font-size:18px; }
+.view-list .extra-card .extra-portion { margin-left:0; }
+.extras-empty { padding:28px 18px; border-radius:24px; border:1px dashed var(--line); text-align:center; }
+@media(min-width:850px) { .menu-kind { margin-top:24px; } }
+@media(max-width:480px) {
+  .menu-kind { max-width:none; margin-top:16px; border-radius:22px; }
+  .menu-kind button { min-height:46px; padding:10px 12px; border-radius:17px; font-size:14px; }
+  .extra-card .extra-price { font-size:19px; }
+  .extra-card .extra-portion { font-size:11px; }
+  .extras-context { font-size:12px; padding:12px 14px; }
+}
+@media(prefers-reduced-motion:reduce) { .menu-kind button { transition:none; } .menu-kind button:active { transform:none; } }
+@media(prefers-reduced-transparency:reduce) { .menu-kind,.extras-context { background:var(--solid); backdrop-filter:none; } }
