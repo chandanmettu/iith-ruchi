@@ -2,6 +2,54 @@
 
 Last updated: **2026-09-24**
 
+## September menu release — 24 September 2026
+
+Owner authorised publication of the updated board menu, priced Extras, compact
+Extras UI, beta feedback fixes and Upcoming roadmap additions. Final local
+checks pass: nine catalog tests, JavaScript syntax, identical entry pages and
+clean diff checks. Publishing only the named release files; design studies and
+local outputs remain untracked. Public deployment verification follows the push.
+
+## Beta feedback fixes — 24 September 2026
+
+Reproduced the stale meal highlight when switching between empty Egg/non-veg or
+Saved results. Card mutations drove the indicator, so empty-to-empty renders
+never moved it. Selection now explicitly updates the indicator; empty-state
+copy names the selected meal. Filters stay selected across meal changes.
+
+Mixed alternatives now appear in both relevant dietary filters, showing only
+the matching option/name/photo/diet marker. Original dish and option IDs stay
+stable for Saved and My Plate. Wednesday breakfast now says Omelette or banana,
+uses an omelette photo, and reveals the correct alternative in each filter.
+Paid one-egg omelettes remain available in daily Breakfast Extras at Rs 10.
+
+Roadmap now describes recent, timestamped and moderated meal feedback separately
+for Mess A/B, plus professionally reviewed general nutrition examples. Neither
+is active, and no universal macro ratio or diet prescription is presented.
+Repeated category photos remain illustrative pending original mess photography.
+
+Validation: nine catalog tests pass, including both paneer/egg curry rotations
+and Wednesday omelette. Browser reproduced and verified highlight alignment
+through all four meals with Egg/non-veg and Saved, and checked Sunday paneer vs
+chicken and Wednesday omelette. No JavaScript errors. Local only; not pushed.
+
+## Protein-goal planner roadmap — 24 September 2026
+
+Added a planned meal planner to Upcoming after nutrition data: a student enters
+a daily protein goal and dietary preference, then receives suggested portions
+from the selected day's menu with estimated nutrition and optional priced extras.
+Suggestions must remain separate from consumed-food logs. Automatic planning is
+not active: the source menu has no nutrient values and consistent serving sizes
+are not available. Original-photo and mobile-app priorities stay first. Local
+roadmap update only; no release date promised.
+
+## Extras notice cleanup — 24 September 2026
+
+Removed the informational box beneath the Extras heading at the owner’s request.
+Payment/availability wording remains inside collapsed Menu notes. The Saturday
+rotation labels and loading/empty states remain. Both entry pages and cache keys
+are updated. Local preview only.
+
 ## Updated board menu and paid extras — 24 September 2026
 
 Implemented locally; publication has not been requested for this update.

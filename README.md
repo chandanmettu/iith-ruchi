@@ -77,8 +77,11 @@ Hostinger. Verify the actual public URLs after deployment.
 
 1. Original photographs of the food served in the mess.
 2. A standalone iPhone/Android app, planned for the App Store and Google Play.
-3. Dish-specific nutrition, profiles with Google login, history/streaks, feedback
-   and report tracking. These are planned, with no promised release dates.
+3. Dish-specific nutrition and serving sizes, followed by a protein-goal meal
+   planner using that day’s menu, dietary preferences and optional priced extras.
+4. Professionally reviewed nutrition reference examples, profiles with Google
+   login, history/streaks, separate recent Mess A/B feedback and report tracking.
+   These are planned, with no promised release dates.
 
 Optional tracking is available as **Plate mode** and **My Plate**.
 The dock opens today's plate across meals, with half-portion adjustments,
