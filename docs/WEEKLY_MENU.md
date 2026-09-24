@@ -1,143 +1,87 @@
-# Weekly menu: August 2026 revision
+# Menu and extras: September 2026 boards
 
-2026-09-22 · Daily dining beta · `index.html` / `today.html`
+Updated 24 September 2026 · local preview, not yet published.
 
-## Current direction
+## Source
 
-The daily dining beta uses the final glass UI with illustrative food photos,
-a vertical seven-day date picker and card/list browsing. Measure is hidden.
-See `PROGRESS.md` for current release scope and `README.md` for entry points.
+Four owner-supplied board photographs cover breakfast, lunch/snacks, dinner and
+paid extras. The two current JSON files record the filenames and SHA-256 hashes;
+original photographs stay in Downloads. The boards print no effective date, so
+this preview treats them as the current menu received on 24 September. Existing
+August data and [interpretation](archive/AUGUST_MENU_INTERPRETATION.md) are retained.
 
-## Source and transcription
+- `assets/data/menu-september-2026.json`: 163 day-specific records plus 20 shared
+  records. Regular meals were checked against all three boards. Added missing
+  peanut/tomato chutneys to Tuesday breakfast and peanut chutney to Wednesday.
+- `assets/data/extras-september-2026.json`: 70 day-specific records plus three
+  shared breakfast extras, with numeric INR prices and portions when printed.
+- `assets/js/menu-catalog.js`: selects included dishes, daily staples, scheduled
+  extras and unmapped rotating choices for the selected day/meal.
 
-Input: `menu revision august 2026 - Sheet1.pdf`, one landscape page, supplied by
-Chandan. Extracted with pdfplumber and pypdf and visually reviewed after rendering.
-The normalized data is `assets/data/menu-august-2026.json`. It retains the input
-SHA-256, original table cells and a recovered Wednesday breakfast text string for
-traceability. The source PDF remains in Downloads; no original file was modified.
+Existing dish IDs are preserved. Extra IDs use an `extra-` prefix so saving or
+logging an extra cannot collide with an included dish. Price lives on the
+scheduled record: Monday pepper chicken costs ₹55; Friday lunch costs ₹45.
+Omelette is ₹10 for one egg at breakfast and ₹20 at other listed meals, where
+the board does not specify its egg count. No portion weights or nutrients are
+inferred.
 
-Coverage: seven days × breakfast/lunch/snacks/dinner, daily staples, Week 1/3 vs
-2/4 variants, beverage rotations, egg/paneer/chicken alternatives, source quantity
-notes, accompaniments, fruit, sweets, chutneys and ingredients where stated.
-160 day-specific entries and 20 shared entries represent the source. These are
-menu records, not counts of unique recipes or meals served.
+## Source interpretations and unresolved details
 
-Wednesday breakfast visually overflows its cell. The PDF text stream reads
-“pav bajji (lemons+onions) and semiya upma”. Both dishes are preserved; Pav bhaji is
-the normalized display spelling. Routine dish-name typos have been normalized,
-with the raw source preserved. Empty snack-food cells have not been filled with
-invented snacks: that meal currently lists the supplied beverages only.
+- Tuesday snacks' egg bonda is crossed out. Wednesday snacks have a handwritten
+  “Egg Bonda (15/-)”; the ₹15 item appears on Wednesday, not Tuesday.
+- Sunday dinner explicitly says nil for extras. Display an empty-state message,
+  not an invented dish or a price of zero.
+- Saturday snacks say weekly alternation but do not assign dishes to weeks.
+  All eight listed choices carry their prices and a rotating/check-counter label;
+  they are never described as all being served together.
+- Asked whether extras apply to both Mess A and Mess B. Until confirmed, describe
+  them as the posted extras list and ask students to check their counter. The
+  already-confirmed shared regular menu remains unchanged.
+- Wednesday fruit still conflicts: papaya Weeks 1/3, muskmelon Weeks 3/4. Withhold
+  that entry and retain the explanation in the closed Menu notes.
+- Tuesday sambar retains the printed radish/lauki choice.
+- Dish-name spelling is normalized (bhurji, pav bhaji, vada pav, paneer). “Chicken
+  Laal Maas” and Monday “Pepper Chicken (any)” retain source notes.
 
-Daily staples are merged with each day's rows, deduplicating exact item IDs.
-The Sunday corn portion remains unspecified: the header's 50 g reference names
-chana/peanuts/sprouts, whereas the Sunday row explicitly specifies corn.
-Explicit portion references are not enforced limits. The 200 g chicken / 100 g
-paneer reference belongs to the biryani ingredient, not the entire biryani weight.
+## Browsing and tracking
 
-## Unconfirmed source details
+A glass Regular menu / Extras switch sits directly beneath the four meal tabs.
+Its count follows the selected date and meal. Extras show INR prices and stated
+portions in both card/list views and dish details. Dietary filtering keeps the
+existing Espresso/Basil/Paprika transitions. Saved shows matching included
+and paid dishes together for that day/meal. Nothing here places an order.
 
-1. **Meal times:** absent from the PDF; the owner supplied the confirmed hours
-   on 22 September (see schedule below).
-2. **Rotation mapping:** Chandan subsequently said to start Week 1 from the
-   month and continue. Implemented as date blocks 1–7 / 8–14 / 15–21 / 22–28,
-   with 29–31 cycling to Week 1 and each month restarting. The fifth-week
-   interpretation was explicitly communicated and can be changed in data config.
-3. **Wednesday fruit:** source says papaya Weeks 1/3 and muskmelon Weeks 3/4.
-   Preserve both in source data, but withhold this ambiguous fruit entry from
-   the student menu and show a short confirmation-pending note. Do not silently
-   change 3/4 to 2/4.
-4. **Tuesday sambar:** source says “Radish or Louki Sambar (Radish)”. Preserve the
-   radish/lauki choice and its source wording.
-5. **Nutrition:** no kcal/protein values or complete recipe weights. All nutrition
-   fields are null; the UI displays unavailable, never zero or fixture estimates.
-6. Some chutneys, alternating papad/fryums and pickles are not assigned exact
-   varieties. Preserve that lack of specificity. Friday dinner has daily fresh
-   chutney in the header but no named variety in its row.
+Plate mode stays optional and off initially. Students can record an extra they
+ate, with the same half-portion controls and manually entered nutrition. Future
+menus remain browse-only. Existing browser-local plate logs are preserved;
+missing nutrients are not fabricated. A failed extras request leaves regular
+menu browsing available and displays an explicit extras loading failure.
 
-Wednesday fruit remains unconfirmed. The monthly rotation rule and confirmed
-service hours have been applied.
+## Calendar and service hours
 
-## Implementation
+Keep the approved month blocks: 1–7 / 8–14 / 15–21 / 22–28 map to Weeks 1–4;
+29–31 map to Week 1, and each month restarts. Students see the next seven dates,
+not a week selector. Extras have weekday schedules independent of this rotation,
+except Saturday's explicitly unresolved chaat selection.
 
-- `today.html`: unified weekly menu, card/list switch, Measure and dialogs.
-- `assets/css/flagship.css`: final glass UI and responsive card/list layouts.
-- `assets/js/menu.js`: source loading, filtering, date controls, logging.
-- `assets/data/menu-august-2026.json`: source-backed content, independent of UI.
-- `assets/icons/`: selected Lucide SVGs and their original licence.
+Asia/Kolkata timings remain owner-confirmed: breakfast 7:30–10:00 weekdays and
+7:30–10:30 weekends; lunch 12:30–14:45; snacks 17:00–18:00; dinner 19:30–21:30.
 
-The date strip always starts today and includes six following dates. No previous/
-next calendar-week browsing, rotation selector or week labels remain in student
-UI. The selected date determines the rotation using `assets/js/menu-rotation.js`
-and `rotationRule` in the menu JSON. Normal alternatives (egg vs paneer, for
-example) remain real food choices, not schedule choices. Unknown rotation config
-withholds rotating items rather than showing incompatible variants together.
-Layout switching preserves the selected menu and measurement state.
-Only layout preference is persistent; the UI starts with Measure off.
+## Photographs
 
-Measure records the selected date, meal, exact option and a self-reported portion
-count. Alternative groups require choosing an option before saving. Editing an
-existing portion replaces its count; other chosen alternatives can coexist.
-There is no product portion cap. Unknown portion weights are not manufactured.
-
-Logs are local to `ruchi.menu-intake.v2.YYYY-MM-DD` and independent of the older
-sample-nutrition diary and registration demo. Counts are not calorie estimates.
-The current date's log is not affected by browsing/logging a different date.
-No backend, authentication, production configuration or registration flow changed.
+33 new Commons photographs are optimized under `assets/images/extras-menu/`.
+`sources.json` and `menu-photo-credits.html` retain source, author and license
+links. Existing egg and banana photography is reused. Related recipes
+may use a dish-family reference (for example chicken curries); these are clearly
+illustrative photographs, not images of actual mess servings. No new AI imagery
+was generated for this update.
 
 ## Validation
 
-- All 28 day/meal screens populated in browser checks.
-- Every entry references an existing local icon; weekly variants use only 1–4;
-  no duplicated day-meal item IDs; every nutrition field remains null.
-- Automatic rotation: September 21 shows fried idli (Week 3); September 22
-  dinner shows jeera rice (Week 4), without the Week 1/3 fried rice.
-- Checked dates 1, 7, 8, 15, 21, 22, 28, 29, 30, 31 and next-month reset.
-- Exactly seven dates render; no rotation selector or week labels remain.
-- Wednesday Week 2 dinner offers pepper egg curry or paneer butter masala;
-  saving stays disabled until an explicit choice is selected.
-- Chosen paneer option with 1.5 portions persists after reload, remains on
-  Wednesday, and is absent from Tuesday. Test log cleared after verification.
-- Card/list views checked at desktop and mobile widths; both fit at 320 px.
-- Fixed expanded Measure controls overlapping subsequent list rows; rechecked
-  real pointer hit areas and the choice flow.
-- JavaScript syntax and Git whitespace checks pass.
-
-## Next
-
-Original mess photographs are next, then a standalone mobile app. Resolve the
-remaining Wednesday fruit ambiguity. Nutrition needs a documented recipe/serving
-source before totals can be introduced. The daily-menu beta is approved for release;
-backend registration activation is a separate task.
-
-## Selected UI
-
-The final local `today.html` blends the user-selected Aura, Apricot and Grove
-concepts: compact date popover, Apricot palette and horizontal meal tiles, clean
-list rows and optional card view. See `docs/PROGRESS.md` for validation. Menu
-source interpretation, rotation and intake storage are unchanged.
-
-
-## Current beta surface (2026-09-22)
-
-Measure is temporarily hidden/disabled on `today.html`; previously recorded logs
-are preserved. Upcoming documents tracking, profile/Google login, streaks and
-feedback as future features. Report currently composes email to the owner-supplied
-mess secretary address after a user review; it does not create backend tickets.
-
-Special-dinner notices use `assets/data/menu-notices.json`: a row with `kind` set
-to `special`, a specific ISO `date`, `title`, `message`, and optional `meal`.
-They appear above meal navigation only for that date and meal. Keep the file empty
-unless an actual announcement is supplied; do not fabricate live service notices.
-
-
-## Confirmed service schedule — 2026-09-22
-
-Owner supplied timings now replace the provisional schedule: breakfast 7:30–10:00
-am Monday–Friday and 7:30–10:30 am Saturday/Sunday; lunch 12:30–2:45 pm;
-snacks 5:00–6:00 pm; dinner 7:30–9:30 pm. All times use Asia/Kolkata.
-`meal-context.js` resolves breakfast hours from the selected date for labels and
-countdowns, and from the current campus date for automatic meal selection.
-The menu JSON records the owner-supplied schedule separately from PDF provenance;
-the obsolete missing-timings issue and confirmation notice are removed.
-Verified 17 boundary/weekend/auto-selection/countdown checks and browser date
-switching (Saturday 10:30 am, Monday 10:00 am). Included in the daily-menu beta.
+`node --test tests/menu-catalog.test.js`: seven passing tests cover all four
+rotations/28 day-meal combinations, price differences, handwritten/crossed-out
+changes, breakfast corrections, nil/rotating extras and loading isolation.
+Browser checks cover all 28 extras screens, Saved, price details, optional plate
+logging/removal in an isolated storage namespace, filters and layouts at 320,
+390, 820 and 1280 CSS px. All 256 regular/extra records resolve to existing
+photo assets, all new images decode, and both HTML entry points match.

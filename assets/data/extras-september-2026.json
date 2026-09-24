@@ -1,0 +1,1005 @@
+{
+  "version": 1,
+  "title": "Mess extras · posted weekly price list",
+  "source": {
+    "filename": "1167e3d1-e983-43de-b73b-9de6f3ca3b93.JPG",
+    "sha256": "3de02328493501be719c4d633b1bc46095c168d658f135868e102c57a1cf0861",
+    "section": "Extras"
+  },
+  "receivedOn": "2026-09-24",
+  "currency": "INR",
+  "scope": "Counter applicability awaiting confirmation",
+  "notes": [
+    "Prices are for the portions stated on the board. Items are paid extras, separate from the regular menu.",
+    "Sunday dinner is explicitly listed as nil.",
+    "Tuesday egg bonda is crossed out; a handwritten ₹15 egg bonda is added to Wednesday snacks.",
+    "Saturday snacks rotate; no week-to-dish mapping is printed."
+  ],
+  "common": {
+    "Breakfast": [
+      {
+        "id": "extra-boiled-egg",
+        "name": "Boiled egg",
+        "category": "Extras",
+        "icon": "egg",
+        "diet": "egg",
+        "nutrition": null,
+        "price": 9,
+        "currency": "INR",
+        "extra": true,
+        "photoKey": "egg"
+      },
+      {
+        "id": "extra-banana",
+        "name": "Banana",
+        "category": "Extras",
+        "icon": "cooking-pot",
+        "diet": "vegetarian",
+        "nutrition": null,
+        "price": 6,
+        "currency": "INR",
+        "extra": true,
+        "photoKey": "banana"
+      },
+      {
+        "id": "extra-omelette",
+        "name": "Omelette",
+        "category": "Extras",
+        "icon": "egg",
+        "diet": "egg",
+        "nutrition": null,
+        "price": 10,
+        "currency": "INR",
+        "extra": true,
+        "photoKey": "omelette",
+        "sourceQuantity": "1 egg"
+      }
+    ]
+  },
+  "days": {
+    "Sunday": {
+      "Breakfast": [],
+      "Lunch": [
+        {
+          "id": "extra-egg-bhurji",
+          "name": "Egg bhurji",
+          "category": "Extras",
+          "icon": "egg",
+          "diet": "egg",
+          "nutrition": null,
+          "price": 25,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "bhurji"
+        },
+        {
+          "id": "extra-mushroom-chilli",
+          "name": "Mushroom chilli",
+          "category": "Extras",
+          "icon": "cooking-pot",
+          "diet": "vegetarian",
+          "nutrition": null,
+          "price": 55,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "mushroom",
+          "sourceQuantity": "100 g"
+        },
+        {
+          "id": "extra-chicken-masala",
+          "name": "Chicken masala",
+          "category": "Extras",
+          "icon": "drumstick",
+          "diet": "nonvegetarian",
+          "nutrition": null,
+          "price": 45,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "chicken-curry"
+        },
+        {
+          "id": "extra-omelette",
+          "name": "Omelette",
+          "category": "Extras",
+          "icon": "egg",
+          "diet": "egg",
+          "nutrition": null,
+          "price": 20,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "omelette"
+        }
+      ],
+      "Snacks": [
+        {
+          "id": "extra-cutlet",
+          "name": "Cutlet",
+          "category": "Extras",
+          "icon": "cooking-pot",
+          "diet": "vegetarian",
+          "nutrition": null,
+          "price": 10,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "cutlet",
+          "sourceQuantity": "1 piece"
+        },
+        {
+          "id": "extra-mirchi-bajji",
+          "name": "Mirchi bajji",
+          "category": "Extras",
+          "icon": "cooking-pot",
+          "diet": "vegetarian",
+          "nutrition": null,
+          "price": 10,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "mirchi-bajji",
+          "sourceQuantity": "2 pieces"
+        }
+      ],
+      "Dinner": []
+    },
+    "Monday": {
+      "Breakfast": [],
+      "Lunch": [
+        {
+          "id": "extra-egg-bhurji",
+          "name": "Egg bhurji",
+          "category": "Extras",
+          "icon": "egg",
+          "diet": "egg",
+          "nutrition": null,
+          "price": 25,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "bhurji"
+        },
+        {
+          "id": "extra-baby-corn",
+          "name": "Baby corn",
+          "category": "Extras",
+          "icon": "cooking-pot",
+          "diet": "vegetarian",
+          "nutrition": null,
+          "price": 55,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "baby-corn",
+          "sourceQuantity": "65 g"
+        },
+        {
+          "id": "extra-pepper-chicken",
+          "name": "Pepper chicken",
+          "category": "Extras",
+          "icon": "drumstick",
+          "diet": "nonvegetarian",
+          "nutrition": null,
+          "price": 55,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "pepper-chicken",
+          "note": "The Monday lunch board lists “Pepper Chicken (any)”."
+        },
+        {
+          "id": "extra-omelette",
+          "name": "Omelette",
+          "category": "Extras",
+          "icon": "egg",
+          "diet": "egg",
+          "nutrition": null,
+          "price": 20,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "omelette"
+        }
+      ],
+      "Snacks": [
+        {
+          "id": "extra-egg-bonda",
+          "name": "Egg bonda",
+          "category": "Extras",
+          "icon": "egg",
+          "diet": "egg",
+          "nutrition": null,
+          "price": 15,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "egg-bonda"
+        },
+        {
+          "id": "extra-sabudana-vada",
+          "name": "Sabudana vada",
+          "category": "Extras",
+          "icon": "cooking-pot",
+          "diet": "vegetarian",
+          "nutrition": null,
+          "price": 20,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "sabudana-vada",
+          "sourceQuantity": "2 pieces",
+          "note": "Served with green chutney."
+        }
+      ],
+      "Dinner": [
+        {
+          "id": "extra-egg-bhurji",
+          "name": "Egg bhurji",
+          "category": "Extras",
+          "icon": "egg",
+          "diet": "egg",
+          "nutrition": null,
+          "price": 25,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "bhurji"
+        },
+        {
+          "id": "extra-chettinad-chicken",
+          "name": "Chettinad chicken",
+          "category": "Extras",
+          "icon": "drumstick",
+          "diet": "nonvegetarian",
+          "nutrition": null,
+          "price": 45,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "chicken-curry"
+        },
+        {
+          "id": "extra-paneer-butter-masala",
+          "name": "Paneer butter masala",
+          "category": "Extras",
+          "icon": "cooking-pot",
+          "diet": "vegetarian",
+          "nutrition": null,
+          "price": 45,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "paneer"
+        },
+        {
+          "id": "extra-fish-gravy",
+          "name": "Fish gravy",
+          "category": "Extras",
+          "icon": "drumstick",
+          "diet": "nonvegetarian",
+          "nutrition": null,
+          "price": 60,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "fish-curry",
+          "sourceQuantity": "150 g · 80 g fish + 70 g gravy"
+        },
+        {
+          "id": "extra-omelette",
+          "name": "Omelette",
+          "category": "Extras",
+          "icon": "egg",
+          "diet": "egg",
+          "nutrition": null,
+          "price": 20,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "omelette"
+        }
+      ]
+    },
+    "Tuesday": {
+      "Breakfast": [],
+      "Lunch": [
+        {
+          "id": "extra-egg-bhurji",
+          "name": "Egg bhurji",
+          "category": "Extras",
+          "icon": "egg",
+          "diet": "egg",
+          "nutrition": null,
+          "price": 25,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "bhurji"
+        },
+        {
+          "id": "extra-paneer-bhurji",
+          "name": "Paneer bhurji",
+          "category": "Extras",
+          "icon": "cooking-pot",
+          "diet": "vegetarian",
+          "nutrition": null,
+          "price": 55,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "paneer-bhurji",
+          "sourceQuantity": "100 g"
+        },
+        {
+          "id": "extra-omelette",
+          "name": "Omelette",
+          "category": "Extras",
+          "icon": "egg",
+          "diet": "egg",
+          "nutrition": null,
+          "price": 20,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "omelette"
+        },
+        {
+          "id": "extra-chicken-manchurian",
+          "name": "Chicken Manchurian",
+          "category": "Extras",
+          "icon": "drumstick",
+          "diet": "nonvegetarian",
+          "nutrition": null,
+          "price": 55,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "chilli-chicken"
+        }
+      ],
+      "Snacks": [
+        {
+          "id": "extra-dal-kachori",
+          "name": "Dal kachori",
+          "category": "Extras",
+          "icon": "cooking-pot",
+          "diet": "vegetarian",
+          "nutrition": null,
+          "price": 15,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "kachori",
+          "sourceQuantity": "1 piece"
+        },
+        {
+          "id": "extra-masala-vada",
+          "name": "Masala vada",
+          "category": "Extras",
+          "icon": "cooking-pot",
+          "diet": "vegetarian",
+          "nutrition": null,
+          "price": 15,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "masala-vada",
+          "sourceQuantity": "2 pieces"
+        }
+      ],
+      "Dinner": [
+        {
+          "id": "extra-egg-bhurji",
+          "name": "Egg bhurji",
+          "category": "Extras",
+          "icon": "egg",
+          "diet": "egg",
+          "nutrition": null,
+          "price": 25,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "bhurji"
+        },
+        {
+          "id": "extra-mushroom-65",
+          "name": "Mushroom 65",
+          "category": "Extras",
+          "icon": "cooking-pot",
+          "diet": "vegetarian",
+          "nutrition": null,
+          "price": 55,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "mushroom",
+          "sourceQuantity": "100 g"
+        },
+        {
+          "id": "extra-butter-chicken",
+          "name": "Butter chicken",
+          "category": "Extras",
+          "icon": "drumstick",
+          "diet": "nonvegetarian",
+          "nutrition": null,
+          "price": 45,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "butter-chicken"
+        },
+        {
+          "id": "extra-omelette",
+          "name": "Omelette",
+          "category": "Extras",
+          "icon": "egg",
+          "diet": "egg",
+          "nutrition": null,
+          "price": 20,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "omelette"
+        }
+      ]
+    },
+    "Wednesday": {
+      "Breakfast": [],
+      "Lunch": [
+        {
+          "id": "extra-egg-bhurji",
+          "name": "Egg bhurji",
+          "category": "Extras",
+          "icon": "egg",
+          "diet": "egg",
+          "nutrition": null,
+          "price": 25,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "bhurji"
+        },
+        {
+          "id": "extra-mushroom-masala",
+          "name": "Mushroom masala",
+          "category": "Extras",
+          "icon": "cooking-pot",
+          "diet": "vegetarian",
+          "nutrition": null,
+          "price": 45,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "mushroom-curry",
+          "sourceQuantity": "100 g · 40 g mushroom + 60 g gravy"
+        },
+        {
+          "id": "extra-butter-chicken",
+          "name": "Butter chicken",
+          "category": "Extras",
+          "icon": "drumstick",
+          "diet": "nonvegetarian",
+          "nutrition": null,
+          "price": 45,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "butter-chicken"
+        },
+        {
+          "id": "extra-omelette",
+          "name": "Omelette",
+          "category": "Extras",
+          "icon": "egg",
+          "diet": "egg",
+          "nutrition": null,
+          "price": 20,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "omelette"
+        }
+      ],
+      "Snacks": [
+        {
+          "id": "extra-veg-momos",
+          "name": "Veg momos",
+          "category": "Extras",
+          "icon": "cooking-pot",
+          "diet": "vegetarian",
+          "nutrition": null,
+          "price": 20,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "momos",
+          "sourceQuantity": "3 pieces",
+          "note": "Served with Schezwan sauce."
+        },
+        {
+          "id": "extra-crispy-corn",
+          "name": "Crispy corn",
+          "category": "Extras",
+          "icon": "cooking-pot",
+          "diet": "vegetarian",
+          "nutrition": null,
+          "price": 15,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "crispy-corn",
+          "sourceQuantity": "50 g"
+        },
+        {
+          "id": "extra-egg-bonda",
+          "name": "Egg bonda",
+          "category": "Extras",
+          "icon": "egg",
+          "diet": "egg",
+          "nutrition": null,
+          "price": 15,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "egg-bonda",
+          "note": "Handwritten addition on the Wednesday snacks board; the Tuesday entry is crossed out."
+        }
+      ],
+      "Dinner": [
+        {
+          "id": "extra-paneer-biryani",
+          "name": "Paneer biryani",
+          "category": "Extras",
+          "icon": "cooking-pot",
+          "diet": "vegetarian",
+          "nutrition": null,
+          "price": 85,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "paneer-biryani",
+          "sourceQuantity": "100 g paneer + 400 g rice"
+        },
+        {
+          "id": "extra-chicken-biryani",
+          "name": "Chicken biryani",
+          "category": "Extras",
+          "icon": "drumstick",
+          "diet": "nonvegetarian",
+          "nutrition": null,
+          "price": 85,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "chicken-biryani",
+          "sourceQuantity": "150 g chicken + 400 g rice"
+        }
+      ]
+    },
+    "Thursday": {
+      "Breakfast": [],
+      "Lunch": [
+        {
+          "id": "extra-egg-gravy",
+          "name": "Egg gravy",
+          "category": "Extras",
+          "icon": "egg",
+          "diet": "egg",
+          "nutrition": null,
+          "price": 25,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "egg-curry"
+        },
+        {
+          "id": "extra-paneer-manchurian",
+          "name": "Paneer Manchurian",
+          "category": "Extras",
+          "icon": "cooking-pot",
+          "diet": "vegetarian",
+          "nutrition": null,
+          "price": 55,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "paneer-manchurian"
+        },
+        {
+          "id": "extra-chicken-kolhapuri",
+          "name": "Chicken Kolhapuri",
+          "category": "Extras",
+          "icon": "drumstick",
+          "diet": "nonvegetarian",
+          "nutrition": null,
+          "price": 45,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "chicken-curry"
+        },
+        {
+          "id": "extra-omelette",
+          "name": "Omelette",
+          "category": "Extras",
+          "icon": "egg",
+          "diet": "egg",
+          "nutrition": null,
+          "price": 20,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "omelette"
+        }
+      ],
+      "Snacks": [
+        {
+          "id": "extra-samosa",
+          "name": "Samosa",
+          "category": "Extras",
+          "icon": "cooking-pot",
+          "diet": "vegetarian",
+          "nutrition": null,
+          "price": 10,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "samosa",
+          "sourceQuantity": "100 g"
+        },
+        {
+          "id": "extra-vada-pav",
+          "name": "Vada pav",
+          "category": "Extras",
+          "icon": "cooking-pot",
+          "diet": "vegetarian",
+          "nutrition": null,
+          "price": 30,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "vada-pav",
+          "sourceQuantity": "2 pieces",
+          "note": "Served with green and Schezwan chutneys."
+        }
+      ],
+      "Dinner": [
+        {
+          "id": "extra-egg-bhurji",
+          "name": "Egg bhurji",
+          "category": "Extras",
+          "icon": "egg",
+          "diet": "egg",
+          "nutrition": null,
+          "price": 25,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "bhurji"
+        },
+        {
+          "id": "extra-paneer-bhurji",
+          "name": "Paneer bhurji",
+          "category": "Extras",
+          "icon": "cooking-pot",
+          "diet": "vegetarian",
+          "nutrition": null,
+          "price": 55,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "paneer-bhurji",
+          "sourceQuantity": "100 g"
+        },
+        {
+          "id": "extra-chilli-chicken",
+          "name": "Chilli chicken",
+          "category": "Extras",
+          "icon": "drumstick",
+          "diet": "nonvegetarian",
+          "nutrition": null,
+          "price": 55,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "chilli-chicken"
+        },
+        {
+          "id": "extra-omelette",
+          "name": "Omelette",
+          "category": "Extras",
+          "icon": "egg",
+          "diet": "egg",
+          "nutrition": null,
+          "price": 20,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "omelette"
+        }
+      ]
+    },
+    "Friday": {
+      "Breakfast": [],
+      "Lunch": [
+        {
+          "id": "extra-egg-bhurji",
+          "name": "Egg bhurji",
+          "category": "Extras",
+          "icon": "egg",
+          "diet": "egg",
+          "nutrition": null,
+          "price": 25,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "bhurji"
+        },
+        {
+          "id": "extra-omelette",
+          "name": "Omelette",
+          "category": "Extras",
+          "icon": "egg",
+          "diet": "egg",
+          "nutrition": null,
+          "price": 20,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "omelette"
+        },
+        {
+          "id": "extra-pepper-chicken",
+          "name": "Pepper chicken",
+          "category": "Extras",
+          "icon": "drumstick",
+          "diet": "nonvegetarian",
+          "nutrition": null,
+          "price": 45,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "pepper-chicken"
+        },
+        {
+          "id": "extra-mushroom-chilli",
+          "name": "Mushroom chilli",
+          "category": "Extras",
+          "icon": "cooking-pot",
+          "diet": "vegetarian",
+          "nutrition": null,
+          "price": 55,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "mushroom",
+          "sourceQuantity": "100 g"
+        }
+      ],
+      "Snacks": [
+        {
+          "id": "extra-bread-pakoda",
+          "name": "Bread pakoda",
+          "category": "Extras",
+          "icon": "cooking-pot",
+          "diet": "vegetarian",
+          "nutrition": null,
+          "price": 15,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "bread-pakoda",
+          "sourceQuantity": "1 piece of bread"
+        },
+        {
+          "id": "extra-egg-bonda",
+          "name": "Egg bonda",
+          "category": "Extras",
+          "icon": "egg",
+          "diet": "egg",
+          "nutrition": null,
+          "price": 15,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "egg-bonda"
+        }
+      ],
+      "Dinner": [
+        {
+          "id": "extra-paneer-dum-biryani",
+          "name": "Paneer dum biryani",
+          "category": "Extras",
+          "icon": "cooking-pot",
+          "diet": "vegetarian",
+          "nutrition": null,
+          "price": 90,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "paneer-biryani",
+          "sourceQuantity": "100 g paneer + 400 g rice",
+          "note": "Made with Seeraga samba biryani rice."
+        },
+        {
+          "id": "extra-chicken-dum-biryani",
+          "name": "Chicken dum biryani",
+          "category": "Extras",
+          "icon": "drumstick",
+          "diet": "nonvegetarian",
+          "nutrition": null,
+          "price": 90,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "chicken-biryani",
+          "sourceQuantity": "150 g chicken + 400 g rice",
+          "note": "Made with Seeraga samba biryani rice."
+        }
+      ]
+    },
+    "Saturday": {
+      "Breakfast": [],
+      "Lunch": [
+        {
+          "id": "extra-egg-bhurji",
+          "name": "Egg bhurji",
+          "category": "Extras",
+          "icon": "egg",
+          "diet": "egg",
+          "nutrition": null,
+          "price": 25,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "bhurji"
+        },
+        {
+          "id": "extra-chicken-laal-maas",
+          "name": "Chicken laal maas",
+          "category": "Extras",
+          "icon": "drumstick",
+          "diet": "nonvegetarian",
+          "nutrition": null,
+          "price": 45,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "chicken-curry",
+          "note": "Listed as “Chicken Laal Maas” on the board."
+        },
+        {
+          "id": "extra-shahi-paneer",
+          "name": "Shahi paneer",
+          "category": "Extras",
+          "icon": "cooking-pot",
+          "diet": "vegetarian",
+          "nutrition": null,
+          "price": 45,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "paneer"
+        },
+        {
+          "id": "extra-omelette",
+          "name": "Omelette",
+          "category": "Extras",
+          "icon": "egg",
+          "diet": "egg",
+          "nutrition": null,
+          "price": 20,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "omelette"
+        }
+      ],
+      "Snacks": [
+        {
+          "id": "extra-samosa",
+          "name": "Samosa",
+          "category": "Extras",
+          "icon": "cooking-pot",
+          "diet": "vegetarian",
+          "nutrition": null,
+          "price": 10,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "samosa",
+          "sourceQuantity": "100 g",
+          "availability": "rotating"
+        },
+        {
+          "id": "extra-papdi-chaat",
+          "name": "Papdi chaat",
+          "category": "Extras",
+          "icon": "cooking-pot",
+          "diet": "vegetarian",
+          "nutrition": null,
+          "price": 25,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "papdi-chaat",
+          "availability": "rotating"
+        },
+        {
+          "id": "extra-aloo-tikki-chaat",
+          "name": "Aloo tikki chaat",
+          "category": "Extras",
+          "icon": "cooking-pot",
+          "diet": "vegetarian",
+          "nutrition": null,
+          "price": 25,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "aloo-tikki",
+          "availability": "rotating"
+        },
+        {
+          "id": "extra-bhel-puri",
+          "name": "Bhel puri",
+          "category": "Extras",
+          "icon": "cooking-pot",
+          "diet": "vegetarian",
+          "nutrition": null,
+          "price": 20,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "bhel-puri",
+          "availability": "rotating"
+        },
+        {
+          "id": "extra-dahi-puri",
+          "name": "Dahi puri",
+          "category": "Extras",
+          "icon": "cooking-pot",
+          "diet": "vegetarian",
+          "nutrition": null,
+          "price": 25,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "dahi-puri",
+          "sourceQuantity": "6 pieces",
+          "availability": "rotating"
+        },
+        {
+          "id": "extra-masala-puri",
+          "name": "Masala puri",
+          "category": "Extras",
+          "icon": "cooking-pot",
+          "diet": "vegetarian",
+          "nutrition": null,
+          "price": 25,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "masala-puri",
+          "sourceQuantity": "6 pieces",
+          "availability": "rotating"
+        },
+        {
+          "id": "extra-dahi-aloo-papdi-chaat",
+          "name": "Dahi aloo papdi chaat",
+          "category": "Extras",
+          "icon": "cooking-pot",
+          "diet": "vegetarian",
+          "nutrition": null,
+          "price": 25,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "papdi-chaat",
+          "availability": "rotating"
+        },
+        {
+          "id": "extra-samosa-chaat",
+          "name": "Samosa chaat",
+          "category": "Extras",
+          "icon": "cooking-pot",
+          "diet": "vegetarian",
+          "nutrition": null,
+          "price": 25,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "samosa-chaat",
+          "availability": "rotating"
+        }
+      ],
+      "Dinner": [
+        {
+          "id": "extra-egg-bhurji",
+          "name": "Egg bhurji",
+          "category": "Extras",
+          "icon": "egg",
+          "diet": "egg",
+          "nutrition": null,
+          "price": 25,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "bhurji"
+        },
+        {
+          "id": "extra-mushroom-masala",
+          "name": "Mushroom masala",
+          "category": "Extras",
+          "icon": "cooking-pot",
+          "diet": "vegetarian",
+          "nutrition": null,
+          "price": 45,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "mushroom-curry",
+          "sourceQuantity": "100 g · 40 g mushroom + 60 g gravy"
+        },
+        {
+          "id": "extra-butter-chicken",
+          "name": "Butter chicken",
+          "category": "Extras",
+          "icon": "drumstick",
+          "diet": "nonvegetarian",
+          "nutrition": null,
+          "price": 45,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "butter-chicken"
+        },
+        {
+          "id": "extra-omelette",
+          "name": "Omelette",
+          "category": "Extras",
+          "icon": "egg",
+          "diet": "egg",
+          "nutrition": null,
+          "price": 20,
+          "currency": "INR",
+          "extra": true,
+          "photoKey": "omelette"
+        }
+      ]
+    }
+  }
+}

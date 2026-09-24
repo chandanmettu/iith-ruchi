@@ -14,7 +14,8 @@ meal timings, saved dishes and a simple way to report an issue.
 ## Daily dining beta
 
 `index.html` and `today.html` serve the same daily-menu app, without login.
-The supplied August 2026 menu drives both messes. Dates automatically resolve
+The notice boards supplied on 24 September 2026 drive the regular menu. A
+separate Extras view lists paid items and prices by day and meal. Dates automatically resolve
 the four-week rotation; students never choose week numbers. Vegetarian and
 non-vegetarian markers, card/list views and browser-local saved dishes are active.
 
@@ -45,7 +46,9 @@ Plain HTML, CSS and JavaScript, with no build step.
 index.html / today.html          daily dining app
 register.html                   preserved registration prototype
 scanner.html / admin.html        registration staff prototypes
-assets/data/menu-august-2026.json source-backed menu and service hours
+assets/data/menu-september-2026.json regular menu and confirmed service hours
+assets/data/extras-september-2026.json paid extras, prices and listed portions
+assets/js/menu-catalog.js        day/meal selection for both menu types
 assets/data/menu-notices.json    dated special announcements (currently empty)
 assets/js/menu.js                menu browsing, saved dishes and daily plate
 assets/js/plate.js               plate rendering and entered-nutrition totals
@@ -85,6 +88,9 @@ entered by the student; coverage labels identify partial totals. The source
 menu contains no nutrition data, so automatic estimates are not populated yet.
 Plate entries stay on the device. Nutrition is not invented.
 Wednesday fruit rotation remains ambiguous in the source and is withheld.
+Saturday extras rotate without a printed week-to-dish mapping, so those choices
+are labelled for counter confirmation. Extras applicability to both messes is
+also pending confirmation. See the local 24 September update in progress.
 See [menu interpretation](docs/WEEKLY_MENU.md) and [progress](docs/PROGRESS.md).
 
 ## Registration backend

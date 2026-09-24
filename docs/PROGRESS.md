@@ -1,6 +1,36 @@
 # Ruchi — current progress
 
-Last updated: **2026-09-22**
+Last updated: **2026-09-24**
+
+## Updated board menu and paid extras — 24 September 2026
+
+Implemented locally; publication has not been requested for this update.
+Rechecked the regular menu against the three supplied boards and corrected
+missing Tuesday/Wednesday breakfast chutneys. Current source-backed JSON replaces
+the August fetch; original data remains available as historical reference.
+
+Added a prominent Regular menu / Extras switch beneath meal navigation. Prices,
+listed portions, vegetarian/egg/non-veg marks and illustrative photos appear in
+both layouts and dish details. Extras follow the selected day/meal, work with
+Saved and optional My Plate, and keep their own IDs to preserve existing logs.
+The regular menu still loads if extras are unavailable.
+
+Transcribed 73 extras records (including three shared breakfast items). Preserved
+meal-specific prices, Sunday's nil dinner and the handwritten Wednesday egg
+bonda correction. Saturday's eight chaat choices are marked rotating/check-counter;
+the board supplies no weekly mapping. Counter scope across both messes awaits
+owner confirmation. Wednesday fruit's source conflict remains withheld.
+
+Added 33 optimized, attributed Commons photos with a visible illustrative-photo
+disclosure and source/license records. Some dishes use related recipe-family
+references until original mess photography arrives.
+
+Validation: seven source/schedule tests pass; browser checked all 28 extras
+screens, correct prices, dietary palettes, Saved, detail sheets and isolated
+My Plate add/remove. At 320/390/820/1280 px, no horizontal overflow; two/three/four
+card columns as intended. All 256 food records resolve to existing photo assets;
+all 33 new images decode. Entry pages match; syntax and diff checks pass. No
+production push or report submission performed.
 
 ## Footer beta notice — 22 September 2026
 
@@ -43,7 +73,7 @@ Optional entry fields accept nonnegative values from labels/reliable sources.
 Isolated browser QA used a separate intake-storage prefix, preserving existing
 user entries. Checked adding, alternative selection, mixed-meal grouping,
 editing, live recalculation, reload persistence, removal/clear and future-date
-blocking. Phone visual review and 320/390/820 px geometry checks passed. Pure
+blocking. Phone visual review and 330/390/820 px geometry checks passed. Pure
 totals checks cover fractional portions, partial coverage, zero and invalid
 values. JavaScript syntax, matching entry pages and diff checks pass.
 Owner authorised publication on 22 September 2026.
