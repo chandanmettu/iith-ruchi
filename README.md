@@ -93,7 +93,7 @@ Plate entries stay on the device. Nutrition is not invented.
 Wednesday fruit rotation remains ambiguous in the source and is withheld.
 Saturday extras rotate without a printed week-to-dish mapping, so those choices
 are labelled for counter confirmation. Extras applicability to both messes is
-also pending confirmation. See the local 24 September update in progress.
+also pending confirmation. The 24 September menu/Extras release is live and verified.
 See [menu interpretation](docs/WEEKLY_MENU.md) and [progress](docs/PROGRESS.md).
 
 ## Registration backend

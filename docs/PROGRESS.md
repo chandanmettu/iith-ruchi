@@ -8,7 +8,12 @@ Owner authorised publication of the updated board menu, priced Extras, compact
 Extras UI, beta feedback fixes and Upcoming roadmap additions. Final local
 checks pass: nine catalog tests, JavaScript syntax, identical entry pages and
 clean diff checks. Publishing only the named release files; design studies and
-local outputs remain untracked. Public deployment verification follows the push.
+local outputs remain untracked. Release `23ac8f3` is live and verified. Cache-busted HTTPS responses match both
+entry pages, changed JavaScript/CSS, and both September menu datasets. Production
+browser checks confirmed priced Extras, working empty-result meal navigation,
+Upcoming entries and loaded dish photos, with no console errors. Hostinger
+transforms image bytes; visible image decoding was verified. This release also
+publishes the previously local menu/Extras update and roadmap work below.
 
 ## Beta feedback fixes — 24 September 2026
 
