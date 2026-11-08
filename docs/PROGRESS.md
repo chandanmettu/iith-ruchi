@@ -1,6 +1,21 @@
 # Ruchi — current progress
 
-Last updated: **2026-09-24**
+Last updated: **2026-11-08**
+
+## November menu release — 8 November 2026
+
+Regular menu replaced from the mess's published Google Sheet (supplied by the
+owner): `assets/data/menu-november-2026.json`, loaded by `menu.js`. 31 new
+dishes; unchanged dishes keep their September IDs so photos, Saved and My Plate
+carry over. Every day keeps all four meal keys (the app reads each one). The
+Wednesday fruit rotation is resolved by the source (papaya weeks 1/3, muskmelon
+2/4), so `wed-fruit` is gone from the issues. Extras are unchanged and still
+from the 24 September boards; the About note says so. The sheet lists no
+Tuesday breakfast chutneys and Monday rasam only for weeks 2/4; both followed
+as written. Ten catalog tests pass. Commit `d13d252` is live and verified by
+cache-busted fetches of both entry pages, `menu.js` and the November dataset.
+The September dataset stays in the repo for history. The separate showcase
+repo (ruchi.chandanmettu.com) was not updated.
 
 ## September menu release — 24 September 2026
 
