@@ -1,6 +1,6 @@
 /* Run with: node --test tests/menu-catalog.test.js */
 const test=require('node:test'),assert=require('node:assert/strict');
-const menu=require('../assets/data/menu-september-2026.json');
+const menu=require('../assets/data/menu-november-2026.json');
 const extras=require('../assets/data/extras-september-2026.json');
 const {forMeal}=require('../assets/js/menu-catalog.js');
 const date=day=>new Date(2026,8,20+day,12); // Sunday through Saturday
@@ -36,12 +36,29 @@ test('Sunday dinner nil and Saturday rotation are not presented as daily stock',
  assert.equal(pick(0,'Dinner').paid.length,0);
  const saturday=pick(6,'Snacks');assert.equal(saturday.scheduled.length,0);assert.equal(saturday.rotating.length,8);
 });
-test('breakfast chutneys corrected; source fruit conflict still withheld',()=>{
- for(const id of ['peanut-chutney','tomato-chutney'])assert.ok(pick(2,'Breakfast').weekly.some(f=>f.id===id));
+test('November rotations: Wednesday fruit resolved, weekly dishes swap on schedule',()=>{
  assert.ok(pick(3,'Breakfast').weekly.some(f=>f.id==='peanut-chutney'));
- for(let week=1;week<=4;week++)assert.ok(!pick(3,'Lunch',week).weekly.some(f=>f.issue==='wed-fruit'));
+ for(const [week,fruit] of [[1,'papaya'],[2,'muskmelon'],[3,'papaya'],[4,'muskmelon']]){
+  const ids=pick(3,'Lunch',week).weekly.map(f=>f.id);
+  assert.ok(ids.includes(fruit));assert.equal(ids.filter(id=>['papaya','muskmelon'].includes(id)).length,1);
+ }
  assert.ok(pick(1,'Breakfast',1).weekly.some(f=>f.id==='fried-idli'));
  assert.ok(!pick(1,'Breakfast',1).weekly.some(f=>f.id==='ragi-idli'));
+ const sweet=week=>pick(6,'Dinner',week).weekly.filter(f=>f.category==='Sweets').map(f=>f.id);
+ assert.deepEqual([1,2,3,4].map(sweet),[['jalebi'],['motichoor-laddu'],['coconut-laddu'],['sweet-boondi']]);
+ assert.deepEqual([1,2,3,4].map(w=>pick(3,'Lunch',w).weekly.filter(f=>f.category==='Dry sabzi').map(f=>f.id)),
+  [['raw-banana-fry'],['raw-banana-sabzi'],['raw-banana-fry'],['gobi-65']]);
+ assert.ok(!pick(1,'Dinner',1).weekly.some(f=>f.category==='Rasam'));
+ assert.ok(pick(1,'Dinner',2).weekly.some(f=>f.id==='jeera-pepper-rasam'));
+});
+test('every meal of every week has a main dish on the November menu',()=>{
+ for(let day=0;day<7;day++)for(let week=1;week<=4;week++){
+  assert.ok(pick(day,'Breakfast',week).weekly.some(f=>f.category==='Main dishes'),`breakfast ${day} w${week}`);
+  for(const meal of ['Lunch','Dinner']){
+   const cats=pick(day,meal,week).weekly.map(f=>f.category);
+   assert.ok(cats.includes('Breads')&&cats.includes('Dal'),`${meal} ${day} w${week}`);
+  }
+ }
 });
 test('regular menu remains usable if extras request fails',()=>{
  const r=forMeal(menu,null,date(4),'Lunch',4);assert.ok(r.weekly.length>0);assert.deepEqual(r.paid,[]);
