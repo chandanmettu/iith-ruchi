@@ -2,6 +2,21 @@
 
 Last updated: **2026-11-08**
 
+## My Plate nutrition estimates — 8 November 2026
+
+Owner asked for approximate nutrition shown in My Plate by quantity.
+`assets/data/nutrition-estimates.json` (kind `estimate`) gives every regular
+dish, option and paid extra (208 entries) a named portion ("1 roti with a
+little ghee", "1 katori, ~150 g") with kcal, protein, carbs and fat: typical
+Indian recipe values, not measured. `plate.js` uses an entered value first,
+else the estimate (option id for choice dishes), times portions; plate rows
+and totals show "≈". The dish sheet shows the estimate live for the chosen
+portion, and the per-portion fields use it as placeholder. The menu datasets
+keep `nutrition: null`. `tests/nutrition-estimates.test.js` checks coverage,
+macro arithmetic (4/4/9 within 12%) and totals; 14 tests pass. Commit
+`476add1` live and verified by cache-busted fetches. When a new menu adds
+dishes, add their estimates or the coverage test fails.
+
 ## November menu release — 8 November 2026
 
 Regular menu replaced from the mess's published Google Sheet (supplied by the
