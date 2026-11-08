@@ -2,6 +2,14 @@
 
 Last updated: **2026-11-08**
 
+## Upcoming sheet refresh — 8 November 2026
+
+Owner's next features: a poll to rate the real mess photos (added to the
+real-photos release), own mess app (existing), more insight (now "Plate
+insights": weekly totals, real values later), your goal (now starts from
+the estimates), and a personal streak (its own planned item). Available-now
+mentions the estimates. Commit `8aee534`, live and verified.
+
 ## My Plate nutrition estimates — 8 November 2026
 
 Owner asked for approximate nutrition shown in My Plate by quantity.
