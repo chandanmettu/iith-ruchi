@@ -1,0 +1,1470 @@
+{
+ "version": 1,
+ "kind": "estimate",
+ "createdOn": "2026-11-08",
+ "basis": "Rough per-portion estimates for typical Indian mess and home-style recipes, at the portion named for each dish. They are not measured: the mess has not supplied recipes, oil quantities or serving weights, so real values can differ a lot.",
+ "fields": {
+  "kcal": "kcal",
+  "protein": "g",
+  "carbs": "g",
+  "fat": "g"
+ },
+ "items": {
+  "1-banana": {
+   "portion": "1 medium banana",
+   "kcal": 90,
+   "protein": 1.1,
+   "carbs": 23,
+   "fat": 0.3
+  },
+  "1-boiled-egg": {
+   "portion": "1 egg",
+   "kcal": 70,
+   "protein": 6,
+   "carbs": 0.5,
+   "fat": 5
+  },
+  "1-egg-omelette": {
+   "portion": "1-egg omelette",
+   "kcal": 95,
+   "protein": 6.5,
+   "carbs": 1,
+   "fat": 7
+  },
+  "aloo-fingers-fry": {
+   "portion": "1 katori, ~100 g",
+   "kcal": 170,
+   "protein": 2,
+   "carbs": 22,
+   "fat": 8.5
+  },
+  "aloo-korma": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 200,
+   "protein": 3.5,
+   "carbs": 22,
+   "fat": 11
+  },
+  "aloo-methi": {
+   "portion": "1 katori, ~100 g",
+   "kcal": 140,
+   "protein": 2.5,
+   "carbs": 17,
+   "fat": 7
+  },
+  "aloo-paratha": {
+   "portion": "1 paratha, ~120 g",
+   "kcal": 290,
+   "protein": 6,
+   "carbs": 40,
+   "fat": 12
+  },
+  "aloo-poppy-seed-curry": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 200,
+   "protein": 4,
+   "carbs": 22,
+   "fat": 11
+  },
+  "anda-curry": {
+   "portion": "1 egg with gravy",
+   "kcal": 180,
+   "protein": 8,
+   "carbs": 7,
+   "fat": 13
+  },
+  "andhra-style-sambar": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 100,
+   "protein": 4,
+   "carbs": 13,
+   "fat": 3.5
+  },
+  "bagara-rice": {
+   "portion": "1 cup, ~200 g",
+   "kcal": 300,
+   "protein": 5,
+   "carbs": 48,
+   "fat": 9
+  },
+  "bhatura": {
+   "portion": "1 bhatura",
+   "kcal": 300,
+   "protein": 6,
+   "carbs": 38,
+   "fat": 14
+  },
+  "bhindi-fry-with-peanuts": {
+   "portion": "1 katori, ~100 g",
+   "kcal": 150,
+   "protein": 3.5,
+   "carbs": 10,
+   "fat": 11
+  },
+  "bitter-gourd-semi-gravy": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 120,
+   "protein": 2.5,
+   "carbs": 10,
+   "fat": 8
+  },
+  "black-chana-curry": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 180,
+   "protein": 9,
+   "carbs": 24,
+   "fat": 6
+  },
+  "boiled-black-chana": {
+   "portion": "50 g",
+   "kcal": 80,
+   "protein": 4.5,
+   "carbs": 13,
+   "fat": 1.3
+  },
+  "boiled-chana-with-tadka": {
+   "portion": "50 g",
+   "kcal": 95,
+   "protein": 4.5,
+   "carbs": 13,
+   "fat": 3
+  },
+  "boiled-corn": {
+   "portion": "1 katori, ~100 g",
+   "kcal": 100,
+   "protein": 3.3,
+   "carbs": 19,
+   "fat": 1.4
+  },
+  "boiled-egg-fry": {
+   "portion": "1 egg, fried with masala",
+   "kcal": 130,
+   "protein": 6.5,
+   "carbs": 3,
+   "fat": 10
+  },
+  "boiled-green-gram-with-tadka": {
+   "portion": "50 g",
+   "kcal": 70,
+   "protein": 3.5,
+   "carbs": 9.5,
+   "fat": 2
+  },
+  "boiled-peanuts": {
+   "portion": "50 g",
+   "kcal": 160,
+   "protein": 7,
+   "carbs": 5,
+   "fat": 11
+  },
+  "boondi-curry": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 180,
+   "protein": 4,
+   "carbs": 14,
+   "fat": 12
+  },
+  "boondi-raita": {
+   "portion": "1 katori, ~100 g",
+   "kcal": 110,
+   "protein": 3.5,
+   "carbs": 9,
+   "fat": 7
+  },
+  "boost": {
+   "portion": "1 glass, ~200 ml with milk",
+   "kcal": 200,
+   "protein": 8,
+   "carbs": 26,
+   "fat": 6
+  },
+  "bournvita": {
+   "portion": "1 glass, ~200 ml with milk",
+   "kcal": 200,
+   "protein": 8,
+   "carbs": 25,
+   "fat": 6
+  },
+  "bread": {
+   "portion": "2 slices, ~50 g",
+   "kcal": 130,
+   "protein": 4.5,
+   "carbs": 25,
+   "fat": 1.5
+  },
+  "butter": {
+   "portion": "1 pat, ~10 g",
+   "kcal": 72,
+   "protein": 0.1,
+   "carbs": 0,
+   "fat": 8
+  },
+  "buttermilk": {
+   "portion": "1 glass, ~200 ml",
+   "kcal": 40,
+   "protein": 2,
+   "carbs": 3,
+   "fat": 2
+  },
+  "cabbage-65": {
+   "portion": "1 katori, ~100 g",
+   "kcal": 200,
+   "protein": 3.5,
+   "carbs": 20,
+   "fat": 12
+  },
+  "cabbage-curry": {
+   "portion": "1 katori, ~100 g",
+   "kcal": 100,
+   "protein": 2,
+   "carbs": 9,
+   "fat": 6.5
+  },
+  "cardamom-tea": {
+   "portion": "1 cup, ~150 ml",
+   "kcal": 70,
+   "protein": 1.5,
+   "carbs": 11,
+   "fat": 2
+  },
+  "chamadumpa-pulusu": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 150,
+   "protein": 2,
+   "carbs": 22,
+   "fat": 6
+  },
+  "chettinad-egg-curry": {
+   "portion": "1 egg with gravy",
+   "kcal": 180,
+   "protein": 8,
+   "carbs": 7,
+   "fat": 13
+  },
+  "chicken-dum-biryani": {
+   "portion": "1 plate, 200 g chicken with rice",
+   "kcal": 650,
+   "protein": 38,
+   "carbs": 65,
+   "fat": 25
+  },
+  "chole-curry": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 220,
+   "protein": 9,
+   "carbs": 28,
+   "fat": 8
+  },
+  "cluster-beans-curry": {
+   "portion": "1 katori, ~100 g",
+   "kcal": 100,
+   "protein": 3,
+   "carbs": 9,
+   "fat": 6
+  },
+  "coconut-chutney": {
+   "portion": "2 tbsp, ~30 g",
+   "kcal": 70,
+   "protein": 1,
+   "carbs": 3,
+   "fat": 6
+  },
+  "coconut-laddu": {
+   "portion": "1 laddu, ~30 g",
+   "kcal": 130,
+   "protein": 1.5,
+   "carbs": 15,
+   "fat": 7
+  },
+  "coffee": {
+   "portion": "1 cup, ~150 ml",
+   "kcal": 80,
+   "protein": 2,
+   "carbs": 12,
+   "fat": 2.5
+  },
+  "cold-milk": {
+   "portion": "1 glass, ~200 ml",
+   "kcal": 120,
+   "protein": 6,
+   "carbs": 10,
+   "fat": 6
+  },
+  "coriander-chutney": {
+   "portion": "2 tbsp, ~30 g",
+   "kcal": 25,
+   "protein": 0.7,
+   "carbs": 3,
+   "fat": 1.2
+  },
+  "corn-palak-masala": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 170,
+   "protein": 5,
+   "carbs": 16,
+   "fat": 10
+  },
+  "cornflakes": {
+   "portion": "25 g, without milk",
+   "kcal": 95,
+   "protein": 2,
+   "carbs": 21,
+   "fat": 0.2
+  },
+  "curd": {
+   "portion": "100 ml",
+   "kcal": 60,
+   "protein": 3.5,
+   "carbs": 4.5,
+   "fat": 3.5
+  },
+  "curd-rice-daddojanam": {
+   "portion": "1 cup, ~200 g",
+   "kcal": 230,
+   "protein": 6,
+   "carbs": 35,
+   "fat": 7
+  },
+  "dal-fry": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 160,
+   "protein": 7,
+   "carbs": 19,
+   "fat": 6
+  },
+  "dal-makhani": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 220,
+   "protein": 8,
+   "carbs": 20,
+   "fat": 12
+  },
+  "dosakaya-chutney": {
+   "portion": "2 tbsp, ~30 g",
+   "kcal": 30,
+   "protein": 0.5,
+   "carbs": 3,
+   "fat": 2
+  },
+  "drumstick-sambar": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 100,
+   "protein": 4,
+   "carbs": 13,
+   "fat": 3.5
+  },
+  "extra-aloo-tikki-chaat": {
+   "portion": "1 plate",
+   "kcal": 300,
+   "protein": 7,
+   "carbs": 42,
+   "fat": 12
+  },
+  "extra-baby-corn": {
+   "portion": "65 g",
+   "kcal": 140,
+   "protein": 2.5,
+   "carbs": 16,
+   "fat": 7.5
+  },
+  "extra-banana": {
+   "portion": "1 medium banana",
+   "kcal": 90,
+   "protein": 1.1,
+   "carbs": 23,
+   "fat": 0.3
+  },
+  "extra-bhel-puri": {
+   "portion": "1 plate",
+   "kcal": 230,
+   "protein": 6,
+   "carbs": 38,
+   "fat": 6
+  },
+  "extra-boiled-egg": {
+   "portion": "1 egg",
+   "kcal": 70,
+   "protein": 6,
+   "carbs": 0.5,
+   "fat": 5
+  },
+  "extra-bread-pakoda": {
+   "portion": "1 piece",
+   "kcal": 230,
+   "protein": 6,
+   "carbs": 26,
+   "fat": 11.5
+  },
+  "extra-butter-chicken": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 330,
+   "protein": 24,
+   "carbs": 9,
+   "fat": 22
+  },
+  "extra-chettinad-chicken": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 280,
+   "protein": 25,
+   "carbs": 7,
+   "fat": 17
+  },
+  "extra-chicken-biryani": {
+   "portion": "150 g chicken with 400 g rice",
+   "kcal": 900,
+   "protein": 42,
+   "carbs": 118,
+   "fat": 28
+  },
+  "extra-chicken-dum-biryani": {
+   "portion": "150 g chicken with 400 g rice",
+   "kcal": 900,
+   "protein": 42,
+   "carbs": 118,
+   "fat": 28
+  },
+  "extra-chicken-kolhapuri": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 290,
+   "protein": 25,
+   "carbs": 7,
+   "fat": 18
+  },
+  "extra-chicken-laal-maas": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 300,
+   "protein": 25,
+   "carbs": 6,
+   "fat": 20
+  },
+  "extra-chicken-manchurian": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 320,
+   "protein": 22,
+   "carbs": 18,
+   "fat": 18
+  },
+  "extra-chicken-masala": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 280,
+   "protein": 25,
+   "carbs": 7,
+   "fat": 17
+  },
+  "extra-chilli-chicken": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 320,
+   "protein": 23,
+   "carbs": 16,
+   "fat": 18
+  },
+  "extra-crispy-corn": {
+   "portion": "50 g",
+   "kcal": 190,
+   "protein": 3,
+   "carbs": 24,
+   "fat": 9
+  },
+  "extra-cutlet": {
+   "portion": "1 piece",
+   "kcal": 150,
+   "protein": 3,
+   "carbs": 18,
+   "fat": 7.5
+  },
+  "extra-dahi-aloo-papdi-chaat": {
+   "portion": "1 plate",
+   "kcal": 300,
+   "protein": 8,
+   "carbs": 42,
+   "fat": 11
+  },
+  "extra-dahi-puri": {
+   "portion": "6 pieces",
+   "kcal": 260,
+   "protein": 7,
+   "carbs": 38,
+   "fat": 9
+  },
+  "extra-dal-kachori": {
+   "portion": "1 piece",
+   "kcal": 190,
+   "protein": 4,
+   "carbs": 20,
+   "fat": 10.5
+  },
+  "extra-egg-bhurji": {
+   "portion": "2 eggs",
+   "kcal": 200,
+   "protein": 13,
+   "carbs": 5,
+   "fat": 14
+  },
+  "extra-egg-bonda": {
+   "portion": "1 piece",
+   "kcal": 200,
+   "protein": 8,
+   "carbs": 15,
+   "fat": 12
+  },
+  "extra-egg-gravy": {
+   "portion": "1 egg with gravy",
+   "kcal": 180,
+   "protein": 8,
+   "carbs": 7,
+   "fat": 13
+  },
+  "extra-fish-gravy": {
+   "portion": "80 g fish with gravy",
+   "kcal": 200,
+   "protein": 17,
+   "carbs": 6,
+   "fat": 12
+  },
+  "extra-masala-puri": {
+   "portion": "6 pieces",
+   "kcal": 280,
+   "protein": 7,
+   "carbs": 40,
+   "fat": 10
+  },
+  "extra-masala-vada": {
+   "portion": "2 pieces",
+   "kcal": 260,
+   "protein": 9,
+   "carbs": 24,
+   "fat": 14
+  },
+  "extra-mirchi-bajji": {
+   "portion": "2 pieces",
+   "kcal": 220,
+   "protein": 4,
+   "carbs": 22,
+   "fat": 13
+  },
+  "extra-mushroom-65": {
+   "portion": "100 g",
+   "kcal": 200,
+   "protein": 4,
+   "carbs": 18,
+   "fat": 12
+  },
+  "extra-mushroom-chilli": {
+   "portion": "100 g",
+   "kcal": 150,
+   "protein": 4,
+   "carbs": 14,
+   "fat": 9
+  },
+  "extra-mushroom-masala": {
+   "portion": "100 g",
+   "kcal": 120,
+   "protein": 3.5,
+   "carbs": 8,
+   "fat": 8.5
+  },
+  "extra-omelette": {
+   "portion": "1-egg omelette",
+   "kcal": 95,
+   "protein": 6.5,
+   "carbs": 1,
+   "fat": 7
+  },
+  "extra-paneer-bhurji": {
+   "portion": "100 g",
+   "kcal": 260,
+   "protein": 14,
+   "carbs": 6,
+   "fat": 20
+  },
+  "extra-paneer-biryani": {
+   "portion": "100 g paneer with 400 g rice",
+   "kcal": 900,
+   "protein": 28,
+   "carbs": 120,
+   "fat": 33
+  },
+  "extra-paneer-butter-masala": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 290,
+   "protein": 11,
+   "carbs": 12,
+   "fat": 22
+  },
+  "extra-paneer-dum-biryani": {
+   "portion": "100 g paneer with 400 g rice",
+   "kcal": 900,
+   "protein": 28,
+   "carbs": 120,
+   "fat": 33
+  },
+  "extra-paneer-manchurian": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 320,
+   "protein": 13,
+   "carbs": 18,
+   "fat": 22
+  },
+  "extra-papdi-chaat": {
+   "portion": "1 plate",
+   "kcal": 280,
+   "protein": 7,
+   "carbs": 38,
+   "fat": 11
+  },
+  "extra-pepper-chicken": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 270,
+   "protein": 26,
+   "carbs": 5,
+   "fat": 16
+  },
+  "extra-sabudana-vada": {
+   "portion": "2 pieces",
+   "kcal": 300,
+   "protein": 4,
+   "carbs": 38,
+   "fat": 15
+  },
+  "extra-samosa": {
+   "portion": "100 g",
+   "kcal": 300,
+   "protein": 5,
+   "carbs": 32,
+   "fat": 17
+  },
+  "extra-samosa-chaat": {
+   "portion": "1 plate",
+   "kcal": 400,
+   "protein": 10,
+   "carbs": 50,
+   "fat": 18
+  },
+  "extra-shahi-paneer": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 310,
+   "protein": 11,
+   "carbs": 12,
+   "fat": 24
+  },
+  "extra-vada-pav": {
+   "portion": "2 pieces",
+   "kcal": 580,
+   "protein": 13,
+   "carbs": 80,
+   "fat": 23
+  },
+  "extra-veg-momos": {
+   "portion": "3 pieces",
+   "kcal": 140,
+   "protein": 4,
+   "carbs": 24,
+   "fat": 3
+  },
+  "fried-idli": {
+   "portion": "2 idlis",
+   "kcal": 220,
+   "protein": 4,
+   "carbs": 28,
+   "fat": 10
+  },
+  "fruit-custard": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 180,
+   "protein": 4,
+   "carbs": 30,
+   "fat": 5
+  },
+  "fruit-salad": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 90,
+   "protein": 1,
+   "carbs": 22,
+   "fat": 0.4
+  },
+  "fryums": {
+   "portion": "1 small handful, ~15 g",
+   "kcal": 75,
+   "protein": 0.5,
+   "carbs": 9,
+   "fat": 4
+  },
+  "garlic-rasam": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 50,
+   "protein": 1.5,
+   "carbs": 7,
+   "fat": 2
+  },
+  "gatte-ki-sabzi": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 220,
+   "protein": 7,
+   "carbs": 18,
+   "fat": 13
+  },
+  "ghee": {
+   "portion": "1 tsp, ~5 g",
+   "kcal": 45,
+   "protein": 0,
+   "carbs": 0,
+   "fat": 5
+  },
+  "ghee-plain-roti": {
+   "portion": "1 roti with a little ghee",
+   "kcal": 140,
+   "protein": 3.5,
+   "carbs": 20,
+   "fat": 5
+  },
+  "ginger-chutney": {
+   "portion": "2 tbsp, ~30 g",
+   "kcal": 45,
+   "protein": 0.7,
+   "carbs": 6,
+   "fat": 2
+  },
+  "ginger-tea": {
+   "portion": "1 cup, ~150 ml",
+   "kcal": 70,
+   "protein": 1.5,
+   "carbs": 11,
+   "fat": 2
+  },
+  "gobi-65": {
+   "portion": "1 katori, ~100 g",
+   "kcal": 210,
+   "protein": 4,
+   "carbs": 20,
+   "fat": 13
+  },
+  "godhuma-rava-upma": {
+   "portion": "1 katori, ~200 g",
+   "kcal": 250,
+   "protein": 6,
+   "carbs": 38,
+   "fat": 8
+  },
+  "green-salad": {
+   "portion": "1 katori, ~100 g",
+   "kcal": 25,
+   "protein": 1,
+   "carbs": 5,
+   "fat": 0.2
+  },
+  "guava": {
+   "portion": "1 medium, ~100 g",
+   "kcal": 68,
+   "protein": 2.6,
+   "carbs": 14,
+   "fat": 1
+  },
+  "gulab-jamun": {
+   "portion": "1 piece with syrup",
+   "kcal": 150,
+   "protein": 2,
+   "carbs": 25,
+   "fat": 5
+  },
+  "gutti-vankaya-semi-gravy": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 170,
+   "protein": 3,
+   "carbs": 11,
+   "fat": 13
+  },
+  "horlicks": {
+   "portion": "1 glass, ~200 ml with milk",
+   "kcal": 200,
+   "protein": 8.5,
+   "carbs": 25,
+   "fat": 6
+  },
+  "hot-milk": {
+   "portion": "1 glass, ~200 ml",
+   "kcal": 120,
+   "protein": 6,
+   "carbs": 10,
+   "fat": 6
+  },
+  "indore-poha": {
+   "portion": "1 plate, ~200 g",
+   "kcal": 300,
+   "protein": 6,
+   "carbs": 44,
+   "fat": 11
+  },
+  "instant-pickle": {
+   "portion": "1 tbsp, ~15 g",
+   "kcal": 25,
+   "protein": 0.3,
+   "carbs": 2,
+   "fat": 1.8
+  },
+  "jalebi": {
+   "portion": "2 pieces, ~50 g",
+   "kcal": 190,
+   "protein": 1,
+   "carbs": 30,
+   "fat": 7
+  },
+  "jam": {
+   "portion": "1 tbsp, ~20 g",
+   "kcal": 55,
+   "protein": 0,
+   "carbs": 14,
+   "fat": 0
+  },
+  "jeera-mint-raita": {
+   "portion": "1 katori, ~100 g",
+   "kcal": 60,
+   "protein": 3,
+   "carbs": 6,
+   "fat": 3
+  },
+  "jeera-pepper-rasam": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 50,
+   "protein": 1.5,
+   "carbs": 7,
+   "fat": 2
+  },
+  "kabuli-chana-mixed-vegetable-curry": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 190,
+   "protein": 8,
+   "carbs": 24,
+   "fat": 7
+  },
+  "kadai-paneer": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 280,
+   "protein": 11,
+   "carbs": 11,
+   "fat": 21
+  },
+  "kaddu-dal-south-indian-style": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 130,
+   "protein": 5.5,
+   "carbs": 17,
+   "fat": 4.5
+  },
+  "kadhi-pakoda": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 200,
+   "protein": 6,
+   "carbs": 15,
+   "fat": 13
+  },
+  "kal-dosa": {
+   "portion": "2 dosas",
+   "kcal": 240,
+   "protein": 6,
+   "carbs": 44,
+   "fat": 4
+  },
+  "kara-kulambu": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 110,
+   "protein": 2,
+   "carbs": 12,
+   "fat": 6
+  },
+  "lahsuni-dal-tadka": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 160,
+   "protein": 7,
+   "carbs": 19,
+   "fat": 6
+  },
+  "lassi": {
+   "portion": "1 glass, ~200 ml, sweet",
+   "kcal": 180,
+   "protein": 5,
+   "carbs": 28,
+   "fat": 5
+  },
+  "lauki-chana-dal": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 140,
+   "protein": 6,
+   "carbs": 16,
+   "fat": 5
+  },
+  "lauki-sambar": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 95,
+   "protein": 4,
+   "carbs": 12,
+   "fat": 3.5
+  },
+  "lemon-coriander-rasam": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 50,
+   "protein": 1.5,
+   "carbs": 7,
+   "fat": 2
+  },
+  "lemon-mint-tea": {
+   "portion": "1 cup, no milk",
+   "kcal": 40,
+   "protein": 0,
+   "carbs": 10,
+   "fat": 0
+  },
+  "lemon-tea": {
+   "portion": "1 cup, no milk",
+   "kcal": 40,
+   "protein": 0,
+   "carbs": 10,
+   "fat": 0
+  },
+  "lobia-curry": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 180,
+   "protein": 9,
+   "carbs": 25,
+   "fat": 5
+  },
+  "masala-dosa": {
+   "portion": "1 dosa with potato filling",
+   "kcal": 350,
+   "protein": 7,
+   "carbs": 48,
+   "fat": 14
+  },
+  "masoor-dal": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 145,
+   "protein": 8,
+   "carbs": 18,
+   "fat": 4.5
+  },
+  "methi-malai-matar-curry": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 220,
+   "protein": 6,
+   "carbs": 14,
+   "fat": 16
+  },
+  "methi-malai-matar-paneer": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 280,
+   "protein": 11,
+   "carbs": 12,
+   "fat": 21
+  },
+  "milk": {
+   "portion": "1 glass, ~200 ml",
+   "kcal": 120,
+   "protein": 6,
+   "carbs": 10,
+   "fat": 6
+  },
+  "mirch-ka-salan": {
+   "portion": "1 katori, ~100 g",
+   "kcal": 180,
+   "protein": 3,
+   "carbs": 8,
+   "fat": 15
+  },
+  "mirchi-ka-thecha": {
+   "portion": "1 tbsp, ~15 g",
+   "kcal": 35,
+   "protein": 1,
+   "carbs": 2,
+   "fat": 2.5
+  },
+  "mixed-dal": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 150,
+   "protein": 8,
+   "carbs": 19,
+   "fat": 4.5
+  },
+  "mixed-sprouts": {
+   "portion": "50 g",
+   "kcal": 45,
+   "protein": 3.5,
+   "carbs": 7,
+   "fat": 0.3
+  },
+  "mixed-vegetable-pickle": {
+   "portion": "1 tbsp, ~15 g",
+   "kcal": 40,
+   "protein": 0.3,
+   "carbs": 2,
+   "fat": 3.5
+  },
+  "mixed-vegetable-sambar": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 105,
+   "protein": 4,
+   "carbs": 14,
+   "fat": 3.5
+  },
+  "moong-dal": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 140,
+   "protein": 7.5,
+   "carbs": 18,
+   "fat": 4
+  },
+  "motichoor-laddu": {
+   "portion": "1 laddu, ~40 g",
+   "kcal": 180,
+   "protein": 3,
+   "carbs": 22,
+   "fat": 9
+  },
+  "mulakkada-tomato-semi-gravy": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 120,
+   "protein": 2.5,
+   "carbs": 12,
+   "fat": 7
+  },
+  "muskmelon": {
+   "portion": "1 cup, ~160 g",
+   "kcal": 55,
+   "protein": 1.3,
+   "carbs": 13,
+   "fat": 0.3
+  },
+  "mysore-bajji": {
+   "portion": "3 pieces",
+   "kcal": 250,
+   "protein": 5,
+   "carbs": 30,
+   "fat": 12
+  },
+  "oats": {
+   "portion": "25 g, without milk",
+   "kcal": 97,
+   "protein": 3.4,
+   "carbs": 17,
+   "fat": 1.7
+  },
+  "onion-aloo-paratha": {
+   "portion": "1 paratha, ~120 g",
+   "kcal": 290,
+   "protein": 6,
+   "carbs": 40,
+   "fat": 12
+  },
+  "onion-raita": {
+   "portion": "1 katori, ~100 g",
+   "kcal": 60,
+   "protein": 3,
+   "carbs": 6,
+   "fat": 3
+  },
+  "onion-sambar": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 100,
+   "protein": 4,
+   "carbs": 13,
+   "fat": 3.5
+  },
+  "palakura-pappu": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 140,
+   "protein": 7,
+   "carbs": 17,
+   "fat": 5
+  },
+  "palli-podi": {
+   "portion": "1 tbsp, ~10 g",
+   "kcal": 50,
+   "protein": 2.3,
+   "carbs": 2.5,
+   "fat": 3.5
+  },
+  "pancharatna-dal": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 160,
+   "protein": 8,
+   "carbs": 20,
+   "fat": 5.5
+  },
+  "paneer-butter-masala": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 290,
+   "protein": 11,
+   "carbs": 12,
+   "fat": 22
+  },
+  "paneer-dum-biryani": {
+   "portion": "1 plate, 100 g paneer with rice",
+   "kcal": 620,
+   "protein": 22,
+   "carbs": 70,
+   "fat": 27
+  },
+  "paneer-kolhapuri": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 290,
+   "protein": 11,
+   "carbs": 11,
+   "fat": 22
+  },
+  "papad": {
+   "portion": "1 papad",
+   "kcal": 60,
+   "protein": 2.5,
+   "carbs": 6,
+   "fat": 3
+  },
+  "papaya": {
+   "portion": "1 cup, ~150 g",
+   "kcal": 65,
+   "protein": 0.7,
+   "carbs": 16,
+   "fat": 0.4
+  },
+  "pappu-charu": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 75,
+   "protein": 3,
+   "carbs": 9,
+   "fat": 3
+  },
+  "peanut-chutney": {
+   "portion": "2 tbsp, ~30 g",
+   "kcal": 90,
+   "protein": 3.5,
+   "carbs": 3,
+   "fat": 7
+  },
+  "pepper-egg-curry": {
+   "portion": "1 egg with gravy",
+   "kcal": 180,
+   "protein": 8,
+   "carbs": 7,
+   "fat": 13
+  },
+  "pepper-rasam": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 50,
+   "protein": 1.5,
+   "carbs": 7,
+   "fat": 2
+  },
+  "perugu-charu": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 90,
+   "protein": 3,
+   "carbs": 8,
+   "fat": 5
+  },
+  "pesarattu": {
+   "portion": "1 pesarattu",
+   "kcal": 200,
+   "protein": 9,
+   "carbs": 26,
+   "fat": 7
+  },
+  "pineapple-kesari": {
+   "portion": "1 katori, ~100 g",
+   "kcal": 250,
+   "protein": 3,
+   "carbs": 38,
+   "fat": 10
+  },
+  "plain-idli": {
+   "portion": "2 idlis",
+   "kcal": 130,
+   "protein": 4,
+   "carbs": 27,
+   "fat": 0.5
+  },
+  "plain-roti": {
+   "portion": "1 roti, ~40 g",
+   "kcal": 110,
+   "protein": 3.5,
+   "carbs": 20,
+   "fat": 1.5
+  },
+  "plain-tea": {
+   "portion": "1 cup, ~150 ml",
+   "kcal": 70,
+   "protein": 1.5,
+   "carbs": 11,
+   "fat": 2
+  },
+  "podi": {
+   "portion": "1 tbsp, ~10 g",
+   "kcal": 45,
+   "protein": 2,
+   "carbs": 3,
+   "fat": 3
+  },
+  "podi-masala": {
+   "portion": "1 tbsp, ~10 g",
+   "kcal": 45,
+   "protein": 2,
+   "carbs": 3,
+   "fat": 3
+  },
+  "pongal": {
+   "portion": "1 katori, ~200 g",
+   "kcal": 290,
+   "protein": 8,
+   "carbs": 40,
+   "fat": 11
+  },
+  "pudina-chutney": {
+   "portion": "2 tbsp, ~30 g",
+   "kcal": 25,
+   "protein": 0.7,
+   "carbs": 3,
+   "fat": 1.2
+  },
+  "pumpkin-sambar": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 105,
+   "protein": 4,
+   "carbs": 15,
+   "fat": 3.5
+  },
+  "punugulu": {
+   "portion": "6 pieces",
+   "kcal": 250,
+   "protein": 6,
+   "carbs": 30,
+   "fat": 12
+  },
+  "puri": {
+   "portion": "2 puris",
+   "kcal": 200,
+   "protein": 3,
+   "carbs": 22,
+   "fat": 11
+  },
+  "radish-sambar": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 95,
+   "protein": 4,
+   "carbs": 12,
+   "fat": 3.5
+  },
+  "ragi-idli": {
+   "portion": "2 idlis",
+   "kcal": 140,
+   "protein": 4,
+   "carbs": 28,
+   "fat": 1
+  },
+  "rajma": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 180,
+   "protein": 8,
+   "carbs": 24,
+   "fat": 6
+  },
+  "rasgulla": {
+   "portion": "1 piece",
+   "kcal": 120,
+   "protein": 3,
+   "carbs": 22,
+   "fat": 2
+  },
+  "rava-upma": {
+   "portion": "1 katori, ~200 g",
+   "kcal": 260,
+   "protein": 6,
+   "carbs": 38,
+   "fat": 9
+  },
+  "raw-banana-fry": {
+   "portion": "1 katori, ~100 g",
+   "kcal": 150,
+   "protein": 1.5,
+   "carbs": 22,
+   "fat": 7
+  },
+  "raw-banana-sabzi": {
+   "portion": "1 katori, ~100 g",
+   "kcal": 130,
+   "protein": 1.5,
+   "carbs": 20,
+   "fat": 5.5
+  },
+  "rice": {
+   "portion": "1 cup cooked, ~150 g",
+   "kcal": 195,
+   "protein": 4,
+   "carbs": 42,
+   "fat": 0.5
+  },
+  "ridge-gourd-curry": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 100,
+   "protein": 2,
+   "carbs": 9,
+   "fat": 6.5
+  },
+  "sambar": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 100,
+   "protein": 4,
+   "carbs": 13,
+   "fat": 3.5
+  },
+  "semiya-payasam": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 200,
+   "protein": 5,
+   "carbs": 30,
+   "fat": 7
+  },
+  "sev-poha": {
+   "portion": "1 plate, ~200 g",
+   "kcal": 300,
+   "protein": 6,
+   "carbs": 44,
+   "fat": 11
+  },
+  "soya-chilli": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 200,
+   "protein": 15,
+   "carbs": 14,
+   "fat": 9
+  },
+  "soya-chunks-curry": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 180,
+   "protein": 14,
+   "carbs": 12,
+   "fat": 8
+  },
+  "sprouts": {
+   "portion": "50 g",
+   "kcal": 45,
+   "protein": 3.5,
+   "carbs": 7,
+   "fat": 0.3
+  },
+  "sweet-boondi": {
+   "portion": "1 katori, ~50 g",
+   "kcal": 220,
+   "protein": 3,
+   "carbs": 30,
+   "fat": 10
+  },
+  "tamarind-rice": {
+   "portion": "1 cup, ~200 g",
+   "kcal": 310,
+   "protein": 5,
+   "carbs": 50,
+   "fat": 10
+  },
+  "tea": {
+   "portion": "1 cup, ~150 ml",
+   "kcal": 70,
+   "protein": 1.5,
+   "carbs": 11,
+   "fat": 2
+  },
+  "thotakura-semi-gravy": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 100,
+   "protein": 3.5,
+   "carbs": 8,
+   "fat": 6
+  },
+  "tomato-chutney": {
+   "portion": "2 tbsp, ~30 g",
+   "kcal": 35,
+   "protein": 0.5,
+   "carbs": 4,
+   "fat": 2
+  },
+  "tomato-dal": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 140,
+   "protein": 6.5,
+   "carbs": 18,
+   "fat": 4.5
+  },
+  "tomato-dal-tadka": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 150,
+   "protein": 7,
+   "carbs": 19,
+   "fat": 5
+  },
+  "tomato-rasam": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 55,
+   "protein": 1.5,
+   "carbs": 8,
+   "fat": 2
+  },
+  "tomato-rice": {
+   "portion": "1 cup, ~200 g",
+   "kcal": 290,
+   "protein": 5,
+   "carbs": 48,
+   "fat": 8
+  },
+  "toor-dal": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 150,
+   "protein": 7,
+   "carbs": 19,
+   "fat": 5
+  },
+  "uttapam": {
+   "portion": "1 uttapam",
+   "kcal": 220,
+   "protein": 6,
+   "carbs": 35,
+   "fat": 6
+  },
+  "vada": {
+   "portion": "1 vada, ~50 g",
+   "kcal": 140,
+   "protein": 5,
+   "carbs": 13,
+   "fat": 8
+  },
+  "vegetable-chutney": {
+   "portion": "2 tbsp, ~30 g",
+   "kcal": 30,
+   "protein": 0.5,
+   "carbs": 3,
+   "fat": 2
+  },
+  "vegetable-fried-rice": {
+   "portion": "1 cup, ~200 g",
+   "kcal": 300,
+   "protein": 5,
+   "carbs": 48,
+   "fat": 9
+  },
+  "vegetable-korma": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 180,
+   "protein": 4,
+   "carbs": 14,
+   "fat": 12
+  },
+  "vegetable-manchurian": {
+   "portion": "1 katori, ~150 g",
+   "kcal": 220,
+   "protein": 4,
+   "carbs": 22,
+   "fat": 13
+  },
+  "watermelon": {
+   "portion": "1 cup, ~150 g",
+   "kcal": 45,
+   "protein": 0.9,
+   "carbs": 11,
+   "fat": 0.2
+  }
+ }
+}
